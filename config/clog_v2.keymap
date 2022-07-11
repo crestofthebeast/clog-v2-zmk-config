@@ -82,7 +82,7 @@
         &kp CARET &kp N0    &kp N1 &kp N2 &kp N3  &kp STAR       &kp GRAVE &kp UNDER &kp LBKT &kp RBKT &kp PRCNT  &kp AMPS
                   &kp PLUS  &kp N4 &kp N5 &kp N6  &kp PIPE       &kp TILDE &kp EQUAL &kp LT   &kp GT   &kp AT
                                    &trans &trans  &kp MINUS      &trans    &trans    &trans
-            >; /* still need combos for bslsh and dollar
+            >; /* still need combos for bslsh and dollar */
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
        
