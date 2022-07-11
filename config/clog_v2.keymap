@@ -67,9 +67,9 @@
 
         MAIN_layer {
             bindings = <
-                              &kp W       &kp G        &kp D       &kp V            &kp J  &kp F      &kp O         &kp U
-            &kp X &kp R       &gqt LALT S &gqt LCTRL T &kp H       &kp B            &kp Y  &kp N      &gqt RCTRL A  &gqt RALT I &kp L  &kp SEMI
-                  &kp FSLH    &kp C       &gqt LGUI M  &kp K       &kp V            &kp J  &kp P      &gqt RGUI SQT &kp Y       &kp DOT
+                              &kp W       &kp G        &kp D       &kp B            &kp J  &kp F      &kp O         &kp U
+            &kp X &kp R       &gqt LALT S &gqt LCTRL T &kp H       &kp V            &kp Y  &kp N      &gqt RCTRL A  &gqt RALT I &kp L  &kp SEMI
+                  &kp FSLH    &kp C       &gqt LGUI M  &kp K       &kp B            &kp J  &kp P      &gqt RGUI SQT &kp Y       &kp DOT
                                           &kp C_MUTE  &mo NAV  &mt LSHFT SPACE &mt RSHFT E &mo SYM   &none
             >;
 
@@ -90,7 +90,7 @@
         NAV_layer {
             bindings = <
                                   &kp PG_DN &kp UP       &kp PG_UP    &kp C_PP             &kp LG(P) &kp LG(D)     &kp LS(LG(D)) &kp LG(Q)
-            &kp C_PREV &kp C_NEXT &kp LEFT  &kp DOWN     &kp RIGHT    &kp LC(TAB)          &kp LG(L) &kp RGUI      &kp RCTRL     &kp RALT  &none &none
+            &kp C_PREV &kp C_NEXT &kp LEFT  &kp DOWN     &kp RIGHT    &kp LC(TAB)          &kp LG(L) &kp BSPC      &kp RCTRL     &kp RALT  &none &none
                        &kp HOME   &kp END   &kp C_VOL_DN &kp C_VOL_UP &kp LS(LC(TAB))      &none     &kp LG(ENTER) &kp LG(O)     &kp LG(N) &none
                                             &trans       &none        &none                &trans    &kp DEL       &trans
             >;
