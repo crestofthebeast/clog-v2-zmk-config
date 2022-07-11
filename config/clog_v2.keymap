@@ -85,6 +85,7 @@
             >; /* still need combos for bslsh and dollar */
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+       };
        
         NAV_layer {
             bindings = <
