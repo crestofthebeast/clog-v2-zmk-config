@@ -78,15 +78,14 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9  &kp STAR       &kp TILDE &kp LBRC  &kp RBRC &kp HASH
-            &none &kp DOT   &kp N1 &kp N2 &kp N3  &kp EQUAL      &kp LT    &kp LPAR  &kp RPAR &kp GT   &kp AMPS  &none
-                  &kp CARET &kp N4 &kp N5 &kp N6  &kp PLUS       &kp DLLR  &kp LBKT  &kp RBKT &kp AT   &kp PRCNT
-                                   &trans &trans  &kp N0         &trans    &trans    &trans
-            >;
+                            &kp N7 &kp N8 &kp N9  &kp PIPE       &kp TILDE &kp HASH  &kp LBRC &kp RBRC
+        &kp CARET &kp N0    &kp N1 &kp N2 &kp N3  &kp STAR       &kp GRAVE &kp UNDER &kp LBKT &kp RBKT &kp PRCNT  &kp AMPS
+                  &kp PLUS  &kp N4 &kp N5 &kp N6  &kp PIPE       &kp TILDE &kp EQUAL &kp LT   &kp GT   &kp AT
+                                   &trans &trans  &kp MINUS      &trans    &trans    &trans
+            >; /* still need combos for bslsh and dollar
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-        };
-
+       
         NAV_layer {
             bindings = <
                                   &kp PG_DN &kp UP       &kp PG_UP    &kp C_PP             &kp LG(P) &kp LG(D)     &kp LS(LG(D)) &kp LG(Q)
