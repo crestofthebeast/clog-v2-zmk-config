@@ -67,10 +67,10 @@
 
         MAIN_layer {
             bindings = <
-                              &kp F      &kp M       &kp P       &kp V            &kp SEMI   &dot_excl  &kp FSLH     &kp BSLH
-            &kp W &mt LSHFT R &mt RALT S &gqt LCTRL N &mt LGUI T &kp G            &kp COMMA  &mt RGUI A &gqt RCTRL E &mt RALT I &mt RSHFT H &kp SQT
-                  &kp X       &kp C      &lt FN L    &lt SYM D   &kp B            &kp MINUS  &lt SYM U  &lt FN O     &kp Y      &kp K
-                                         &kp C_MUTE  &kp ENTER  &lt NAV SPC      &skq RSHFT &kp BSPC   &none
+                              &kp W       &kp G        &kp D       &kp V            &kp J  &kp F      &kp O         &kp U
+            &kp X &kp R       &gqt LALT S &gqt LCTRL T &kp H       &kp B            &kp Y  &kp N      &gqt RCTRL A  &gqt RALT I &kp L  &kp SEMI
+                  &kp FSLH    &kp C       &gqt LGUI M  &kp K       &kp V            &kp J  &kp P      &gqt RGUI SQT &kp Y       &kp DOT
+                                          &kp C_MUTE  &mo NAV  &mt LSHFT SPACE &mt RSHFT E &mo SYM   &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
