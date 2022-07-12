@@ -42,26 +42,18 @@
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
 	    bindings = <&kp>, <&kp>;
-	};
 };
+    };
 
     combos {
         compatible = "zmk,combos";
-	
         combo_q {
             timeout-ms = <30>;
             key-positions = <1 2>;
             bindings = <&kp Q>;
             layers = <0>;
         };
-
-        combo_j {
-            timeout-ms = <30>;
-            key-positions = <21 22>;
-            bindings = <&kp J>;
-            layers = <0>;
-        };
-
+	
         combo_z {
             timeout-ms = <30>;
             key-positions = <0 1>;
@@ -78,7 +70,7 @@
                                  &kp V       &kp W        &kp M       &kp K            &kp P  &kp F      &kp COMMA     &kp DOT
             &kp FSLH &kp C       &gqt LALT R &gqt LCTRL S &kp T       &kp B            &kp Y  &kp N      &gqt RCTRL E  &gqt RALT I &kp A  &kp SEMI
                      &kp X       &kp L       &gqt LGUI G  &kp D       &kp K            &kp P  &kp H      &gqt RGUI O   &kp U       &kp SQT
-                                          &kp C_MUTE         &mo NAV  &mt SPACE     &skq RSHFT &mo SYM   &none
+                                          &kp C_MUTE      &mo NAV     &kp SPACE    &skq RSHFT &mo SYM    &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
