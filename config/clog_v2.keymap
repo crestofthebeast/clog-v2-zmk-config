@@ -66,7 +66,7 @@
             key-positions = <21 22>;
             bindings = <&kp J>;
             layers = <0>;
-	}
+	};
     };
 
     keymap {
