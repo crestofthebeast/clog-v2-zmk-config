@@ -42,31 +42,32 @@
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
 	    bindings = <&kp>, <&kp>;
+	};
 };
-    };
 
     combos {
         compatible = "zmk,combos";
+	
         combo_q {
             timeout-ms = <30>;
             key-positions = <1 2>;
             bindings = <&kp Q>;
             layers = <0>;
         };
-	
+
+        combo_j {
+            timeout-ms = <30>;
+            key-positions = <21 22>;
+            bindings = <&kp J>;
+            layers = <0>;
+        };
+
         combo_z {
             timeout-ms = <30>;
             key-positions = <0 1>;
             bindings = <&kp Z>;
             layers = <0>;
         };
-	
-	combo_j {
-	    timeout-ms = <30;
-            key-positions = <21 22>;
-            bindings = <&kp J>;
-            layers = <0>;
-	};
     };
 
     keymap {
