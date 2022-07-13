@@ -16,13 +16,6 @@
 
 / {
     behaviors {
-        dot_excl: dot_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_EXCL";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp EXCL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
 
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
@@ -96,10 +89,10 @@
        
         NAV_layer {
             bindings = <
-                                  &kp PG_DN &kp UP       &kp PG_UP    &kp C_PP             &kp LG(P) &kp LG(D)     &kp LS(LG(D)) &kp LG(Q)
-            &kp C_PREV &kp C_NEXT &kp LEFT  &kp DOWN     &kp RIGHT    &kp LC(TAB)          &kp LG(L) &kp BSPC      &kp RCTRL     &kp RALT  &none &none
-                       &kp HOME   &kp END   &kp C_VOL_DN &kp C_VOL_UP &kp LS(LC(TAB))      &none     &kp ENTER     &kp LG(O)     &kp LG(N) &none
-                                            &trans       &none        &none                &trans    &kp DEL       &trans
+                                  &none     &none        &none        &none                &none     &kp ESC       &kp ENTER     &kp TAB
+            &none      &sk LSHFT  &sk LALT  &sk LCTRL    &none        &none                &none     &kp LEFT      &kp DOWN      &kp RIGHT &kp HOME &none
+                       &kp PSCRN  &none     &sk LGUI     &none        &none                &none     &kp BSPC      &kp UP        &kp DEL   &kp END
+                                            &trans       &none        &none                &trans    &none         &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
