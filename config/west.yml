@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/nickconway
   projects:
     - name: zmk
-      remote: nickconway
+      remote: zmkfirmware
       revision: leader-key
       import: app/west.yml
   self:
