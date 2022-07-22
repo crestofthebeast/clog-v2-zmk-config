@@ -90,6 +90,69 @@
             bindings = <&kp Z>;
             layers = <0>;
         };
+	
+	
+	/* vert combos */
+	combo_0 {
+            timeout-ms = <30>;
+            key-positions = <11 22>;
+            bindings = <&kp N0>;
+            layers = <0>;
+        };
+	combo_1 {
+            timeout-ms = <30>;
+            key-positions = <16 27>;
+            bindings = <&kp N1>;
+            layers = <0>;
+        };
+	combo_2 {
+            timeout-ms = <30>;
+            key-positions = <12 23>;
+            bindings = <&kp N2>;
+            layers = <0>;
+        };
+	combo_3 {
+            timeout-ms = <30>;
+            key-positions = <15 26>;
+            bindings = <&kp N3>;
+            layers = <0>;
+        };
+	combo_4 {
+            timeout-ms = <30>;
+            key-positions = <10 21>;
+            bindings = <&kp N4>;
+            layers = <0>;
+        };
+	combo_5 {
+            timeout-ms = <30>;
+            key-positions = <17 28>;
+            bindings = <&kp N5>;
+            layers = <0>;
+        };
+	combo_6 {
+            timeout-ms = <30>;
+            key-positions = <0 10>;
+            bindings = <&kp N6>;
+            layers = <0>;
+        };
+	combo_7 {
+            timeout-ms = <30>;
+            key-positions = <7 17>;
+            bindings = <&kp N7>;
+            layers = <0>;
+        };
+	combo_8 {
+            timeout-ms = <30>;
+            key-positions = <1 11>;
+            bindings = <&kp N8>;
+            layers = <0>;
+        };
+	combo_9 {
+            timeout-ms = <30>;
+            key-positions = <6 16>;
+            bindings = <&kp N9>;
+            layers = <0>;
+        };
     };
 
     keymap {
