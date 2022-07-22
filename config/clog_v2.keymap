@@ -77,7 +77,7 @@
             layers = <0>;
         };
 	
-	combo_lcurly
+	combo_lcurly {
             timeout-ms = <30>;
             key-positions = <1 2>;
             bindings = <&kp Z>;
