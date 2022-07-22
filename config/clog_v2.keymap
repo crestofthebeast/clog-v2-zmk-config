@@ -38,26 +38,56 @@
 };
     };
 
+/*                KEY POSITIONS
+
+      ╭─────────────────╮ ╭─────────────────╮
+╭─────╯  0   1   2   3  │ │  4   5   6   7  ╰──────╮
+│ 8  9   10  11  12  13 │ │ 14  15  16  17  18  19 |
+╰──╮ 20  21  22  23  24 │ │ 25  26  27  28  29 ╭───╯
+   ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
+               ╰────────╯ ╰────────╯            */
+
     combos {
         compatible = "zmk,combos";
         combo_q {
             timeout-ms = <30>;
-            key-positions = <0 1>;
+            key-positions = <21 22>;
             bindings = <&kp Q>;
             layers = <0>;
         };
 	
         combo_z {
             timeout-ms = <30>;
+            key-positions = <22 23>;
+            bindings = <&kp Z>;
+            layers = <0>;
+        };
+	
+	combo_lparen
+            timeout-ms = <30>;
+            key-positions = <2 12>;
+            bindings = <&kp Z>;
+            layers = <0>;
+        };
+	
+	combo_rparen {
+            timeout-ms = <30>;
+            key-positions = <5 15>;
+            bindings = <&kp Z>;
+            layers = <0>;
+        };
+	
+	combo_lcurly
+            timeout-ms = <30>;
             key-positions = <1 2>;
             bindings = <&kp Z>;
             layers = <0>;
         };
 	
-	combo_j {
+	combo_rcurly {
             timeout-ms = <30>;
-            key-positions = <21 22>;
-            bindings = <&kp J>;
+            key-positions = <5 6>;
+            bindings = <&kp Z>;
             layers = <0>;
         };
     };
