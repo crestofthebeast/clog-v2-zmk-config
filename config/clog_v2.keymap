@@ -63,7 +63,7 @@
             layers = <0>;
         };
 	
-	combo_lparen
+	combo_lparen {
             timeout-ms = <30>;
             key-positions = <2 12>;
             bindings = <&kp Z>;
