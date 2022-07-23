@@ -38,26 +38,49 @@
 };
     };
 
+/*                KEY POSITIONS
+
+      ╭─────────────────╮ ╭─────────────────╮
+╭─────╯  0   1   2   3  │ │  4   5   6   7  ╰──────╮
+│ 8  9   10  11  12  13 │ │ 14  15  16  17  18  19 |
+╰──╮ 20  21  22  23  24 │ │ 25  26  27  28  29 ╭───╯
+   ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
+               ╰────────╯ ╰────────╯            */
+
     combos {
         compatible = "zmk,combos";
         combo_q {
             timeout-ms = <30>;
-            key-positions = <0 1>;
+            key-positions = <21 22>;
             bindings = <&kp Q>;
             layers = <0>;
         };
 	
         combo_z {
             timeout-ms = <30>;
-            key-positions = <1 2>;
+            key-positions = <22 23>;
             bindings = <&kp Z>;
             layers = <0>;
         };
 	
-	combo_j {
+	combo_semicolon {
             timeout-ms = <30>;
-            key-positions = <21 22>;
-            bindings = <&kp J>;
+            key-positions = <0 1>;
+            bindings = <&kp SEMI>;
+            layers = <0>;
+        };
+	
+	combo_esc {
+            timeout-ms = <30>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+            layers = <0>;
+        };
+	
+	combo_enter {
+            timeout-ms = <30>;
+            key-positions = <0 1>;
+            bindings = <&kp ENTER>;
             layers = <0>;
         };
     };
@@ -67,9 +90,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp W       &kp F        &kp P       &kp B            &kp X  &kp L      &kp O            &kp U
-            &kp FSLH &kp Y       &gqt LALT R &gqt LCTRL S &kp T       &kp G            &kp M  &kp N      &gqt RCTRL A     &gqt RALT I &kp C  &kp SEMI
-                     &kp K       &kp J       &gqt LGUI V  &kp D       &kp B            &kp X  &kp H      &gqt RGUI COMMA  &kp DOT     &kp SQT
+                                 &kp W       &kp M        &kp V       &kp K            &kp J  &kp F      &kp SQT      &kp COMMA
+            &kp FSLH &kp R       &gqt LALT S &gqt LCTRL T &kp H       &kp B            &kp P  &kp N      &gqt RCTRL A &gqt RALT I &kp L  &kp SEMI
+                     &kp X       &kp C       &gqt LGUI G  &kp D       &kp K            &kp J  &kp Y      &gqt RGUI O  &kp U       &kp DOT
                                            &kp C_MUTE  &mo NAV  &mt LSHFT SPACE       &mt RSHFT E &mo SYM   &none
             >;
 
