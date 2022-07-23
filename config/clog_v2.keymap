@@ -65,7 +65,7 @@
 	
 	combo_semicolon {
             timeout-ms = <30>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             bindings = <&kp SEMI>;
             layers = <0>;
         };
@@ -79,8 +79,15 @@
 	
 	combo_enter {
             timeout-ms = <30>;
-            key-positions = <0 1>;
+            key-positions = <6 7>;
             bindings = <&kp ENTER>;
+            layers = <0>;
+        };
+	
+	combo_repeat {
+            timeout-ms = <30>;
+            key-positions = <6 15>;
+            bindings = <&key_repeat>;
             layers = <0>;
         };
     };
