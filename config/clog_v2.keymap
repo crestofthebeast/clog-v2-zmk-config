@@ -97,9 +97,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp C       &kp M        &kp P       &kp K            &kp X  &kp COMMA  &kp DOT       &kp SQT
+                                 &kp G       &kp M        &kp P       &kp K            &kp X  &kp COMMA  &kp DOT       &kp SQT
             &kp FSLH &kp N       &gqt LALT S &gqt LCTRL T &kp H       &kp V            &kp W  &kp R      &gqt RCTRL E  &gqt RALT A &kp I  &kp SEMI
-                     &kp B       &kp G       &gqt LGUI D  &kp F       &kp K            &kp X  &kp L  &gqt RGUI U   &kp O     &kp Y
+                     &kp B       &kp C       &gqt LGUI D  &kp F       &kp K            &kp X  &kp L  &gqt RGUI U   &kp O     &kp Y
                                                &kp C_MUTE  &mo NAV  &kp SPC     &skq RSHFT &mo SYM   &none
             >;
 
