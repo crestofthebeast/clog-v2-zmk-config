@@ -63,10 +63,10 @@
             layers = <0>;
         };
 	
-	combo_semicolon {
+	combo_j {
             timeout-ms = <30>;
-            key-positions = <1 2>;
-            bindings = <&kp SEMI>;
+            key-positions = <2 3>;
+            bindings = <&kp J>;
             layers = <0>;
         };
 	
