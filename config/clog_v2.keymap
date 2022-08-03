@@ -104,9 +104,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp G       &kp M        &kp P       &kp K            &kp X  &kp COMMA  &kp DOT       &kp SQT
-            &kp FSLH &kp N       &gqt LALT S &gqt LCTRL T &kp H       &kp V            &kp W  &kp R      &gqt RCTRL E  &gqt RALT A &kp I  &kp SEMI
-                     &kp B       &kp C       &gqt LGUI D  &kp F       &kp K            &kp X  &kp L  &gqt RGUI U   &kp O     &kp Y
+                                 &kp W       &kp V        &kp P       &kp K            &kp X  &kp H    &kp SLASH     &kp COMMA
+            &kp SQT  &kp C       &gqt LALT R &gqt LCTRL S &kp T       &kp B            &kp M  &kp N    &gqt RCTRL E  &gqt RALT I &kp A  &kp DQT
+                     &kp G       &kp L       &gqt LGUI Y  &kp D       &kp K            &kp X  &kp F    &gqt RGUI O   &kp U       &kp DOT
                                                &kp C_MUTE  &mo NAV  &kp SPC     &skq RSHFT &mo SYM   &none
             >;
 
@@ -119,7 +119,7 @@
         &kp CARET &kp N0    &kp N1 &kp N2 &kp N3  &kp STAR       &kp GRAVE &kp UNDER &kp LBKT &kp RBKT &kp PRCNT  &kp AMPS
                   &kp PLUS  &kp N4 &kp N5 &kp N6  &kp PIPE       &kp TILDE &kp EQUAL &kp LT   &kp GT   &kp AT
                                    &trans &trans  &kp MINUS      &trans    &trans    &trans
-            >; /* still need combos for bslsh and dollar */
+            >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
        };
