@@ -37,6 +37,17 @@
 	    bindings = <&kp>, <&kp>;
 	};
 	
+	weirdgqt: global-quick-tap {
+	    compatible = "zmk,behavior-hold-tap";
+	    label = "GLOBAL_QUICK_TAP";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <200>;
+	    quick-tap-ms = <125>;
+	    global-quick-tap;
+	    bindings = <&kp>, <&slang>;
+	};
+	
 	slang: slash_bang {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_BANG";
@@ -179,9 +190,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp L       &kp Y        &kp D        &kp K            &kp X  &kp F        &kp O           &kp U
-            &quipe   &kp C       &gqt LALT R &gqt LSHFT S &gqt LCTRL T &kp B            &kp M  &gqt RCTRL N &gqt RSHFT E    &gqt RALT I &kp A  &sqtave
-                     &kp G       &kp W       &gqt LGUI V  &kp P        &kp K            &kp X  &kp H        &gqt LGUI slang &quomma     &stot
+                                 &kp L       &kp Y        &kp D        &kp K            &kp X  &kp F        &kp O            &kp U
+            &quipe   &kp C       &gqt LALT R &gqt LSHFT S &gqt LCTRL T &kp B            &kp M  &gqt RCTRL N &gqt RSHFT E     &gqt RALT I &kp A  &sqtave
+                     &kp G       &kp W       &gqt LGUI V  &kp P        &kp K            &kp X  &kp H        &weirdgqt RGUI 0 &quomma     &stot
                                                &kp C_MUTE  &mo NAV  &kp SPC     &skq RSHFT &mo SYM   &none
             >;
 
