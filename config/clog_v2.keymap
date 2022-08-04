@@ -144,14 +144,14 @@
 	
 	combo_esc {
             timeout-ms = <30>;
-            key-positions = <26 27>;
+            key-positions = <1 12>;
             bindings = <&kp ESC>;
             layers = <0>;
         };
 	
 	combo_enter {
             timeout-ms = <30>;
-            key-positions = <26 27>;
+            key-positions = <6 15>;
             bindings = <&kp ENTER>;
             layers = <0>;
         };
