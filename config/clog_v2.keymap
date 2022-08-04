@@ -105,7 +105,7 @@
         MAIN_layer {
             bindings = <
                                  &kp L       &kp Y        &kp D       &kp K            &kp X  &kp F   &kp O           &kp U
-            &kp SQT  &kp C       &gqt LALT R &gqt LCTRL S &kp T       &kp B            &kp M  &kp N   &gqt RCTRL E    &gqt RALT I &kp A  &kp DQT
+            &kp DQT  &kp C       &gqt LALT R &gqt LCTRL S &kp T       &kp B            &kp M  &kp N   &gqt RCTRL E    &gqt RALT I &kp A  &kp SQT
                      &kp G       &kp W       &gqt LGUI V  &kp P       &kp K            &kp X  &kp H   &gqt RGUI SLASH &kp COMMA   &kp DOT
                                                &kp C_MUTE  &mo NAV  &kp SPC     &skq RSHFT &mo SYM   &none
             >;
@@ -115,10 +115,10 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9  &kp PIPE       &kp TILDE &kp HASH  &kp LBRC &kp RBRC
-        &kp CARET &kp N0    &kp N1 &kp N2 &kp N3  &kp STAR       &kp GRAVE &kp UNDER &kp LBKT &kp RBKT &kp PRCNT  &kp AMPS
-                  &kp PLUS  &kp N4 &kp N5 &kp N6  &kp PIPE       &kp TILDE &kp EQUAL &kp LT   &kp GT   &kp AT
-                                   &trans &trans  &kp MINUS      &trans    &trans    &trans
+                            &kp N7 &kp N8 &kp N9  &kp EQUAL      &kp AMPS  &kp HASH  &kp RPAR &kp RBRC
+            &none &kp STAR  &kp N3 &kp N2 &kp N1  &kp LBKT       &kp RBKT  &kp SEMI  &kp LPAR &kp LBRC &kp PRCNT &none
+                  &kp CARET &kp N4 &kp N5 &kp N6  &kp EQUAL      &kp AMPS  &kp PLUS  &kp LT   &kp GT   &kp TILDE
+                                   &trans &trans  &kp N0         &trans    &trans    &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
