@@ -35,7 +35,15 @@
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
 	    bindings = <&kp>, <&kp>;
-};
+	};
+	
+	slang: slash_bang {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_BANG";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
 /*                KEY POSITIONS
