@@ -37,9 +37,9 @@
 	    bindings = <&kp>, <&kp>;
 	};
 	
-	weirdgqt: global-quick-tap {
+	weirdgqt: weird-global-quick-tap {
 	    compatible = "zmk,behavior-hold-tap";
-	    label = "GLOBAL_QUICK_TAP";
+	    label = "WEIRD_GLOBAL_QUICK_TAP";
 	    #binding-cells = <2>;
 	    flavor = "tap-preferred";
 	    tapping-term-ms = <200>;
