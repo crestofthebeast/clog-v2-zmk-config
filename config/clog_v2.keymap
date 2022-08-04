@@ -181,7 +181,7 @@
             bindings = <
                                  &kp L       &kp Y        &kp D        &kp K            &kp X  &kp F        &kp O           &kp U
             &quipe   &kp C       &gqt LALT R &gqt LSHFT S &gqt LCTRL T &kp B            &kp M  &gqt RCTRL N &gqt RSHFT E    &gqt RALT I &kp A  &sqtave
-                     &kp G       &kp W       &gqt LGUI V  &kp P        &kp K            &kp X  &kp H        &gqt slang      &quomma     &stot
+                     &kp G       &kp W       &gqt LGUI V  &kp P        &kp K            &kp X  &kp H        &slang          &quomma     &stot
                                                &kp C_MUTE  &mo NAV  &kp SPC     &skq RSHFT &mo SYM   &none
             >;
 
