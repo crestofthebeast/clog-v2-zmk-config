@@ -15,6 +15,27 @@
 };
 
 / {
+	
+    macros {
+        lw_macro: lw_macro {
+        compatible = "zmk,behavior-macro";
+        label = "ZM_lw_macro";
+        #binding-cells = <0>;
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&kp L &kp W>;
+    	};
+	
+	wl_macro: wl_macro {
+        compatible = "zmk,behavior-macro";
+        label = "ZM_wl_macro";
+        #binding-cells = <0>;
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&kp W &kp L>;
+    	};
+    };
+    
     behaviors {
 
         skq: sticky_key_quick_release {
@@ -104,6 +125,20 @@
             timeout-ms = <30>;
             key-positions = <22 23>;
             bindings = <&kp Q>;
+            layers = <0>;
+        };
+	
+	combo_wl {
+            timeout-ms = <30>;
+            key-positions = <21 23>;
+            bindings = <&wl_macro>;
+            layers = <0>;
+        };
+	
+	combo_lw {
+            timeout-ms = <30>;
+            key-positions = <0 26>;
+            bindings = <&lw_macro>;
             layers = <0>;
         };
 	
