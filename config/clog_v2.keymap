@@ -137,7 +137,7 @@
 	
 	combo_lw {
             timeout-ms = <30>;
-            key-positions = <0 26>;
+            key-positions = <0 3>;
             bindings = <&lw_macro>;
             layers = <0>;
         };
