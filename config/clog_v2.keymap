@@ -163,6 +163,13 @@
             layers = <0>;
         };
 	
+	combo_hash {
+            timeout-ms = <30>;
+            key-positions = <5 6>;
+            bindings = <&kp HASH>;
+            layers = <0>;
+        };
+	
 	combo_underscore {
             timeout-ms = <30>;
             key-positions = <27 28>;
@@ -227,7 +234,7 @@
             bindings = <
                                  &kp L       &kp Y        &kp D        &kp K            &kp X  &kp F        &kp O            &kp U
             &quipe   &kp C       &gqt LALT R &gqt LSHFT S &gqt LCTRL T &kp B            &kp M  &gqt RCTRL N &gqt RSHFT E     &gqt RALT I &kp A  &sqtave
-                     &kp G       &kp W       &gqt LGUI V  &kp P        &kp K            &kp X  &kp H        &weirdgqt RGUI 0 &quomma     &stot
+                     &kp P       &kp W       &gqt LGUI V  &kp G        &kp K            &kp X  &kp H        &weirdgqt RGUI 0 &quomma     &stot
                                                &kp C_MUTE  &mo NAV  &kp SPC     &skq RSHFT &mo SYM   &none
             >;
 
@@ -236,7 +243,7 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9  &kp EQUAL      &kp AMPS  &kp HASH  &kp RPAR &kp RBRC
+                            &kp N7 &kp N8 &kp N9  &kp EQUAL      &kp AMPS  &kp AT    &kp RPAR &kp RBRC
             &none &kp STAR  &kp N3 &kp N2 &kp N1  &kp LBKT       &kp RBKT  &kp SEMI  &kp LPAR &kp LBRC &kp PRCNT &none
                   &kp CARET &kp N4 &kp N5 &kp N6  &kp EQUAL      &kp AMPS  &kp PLUS  &kp LT   &kp GT   &kp TILDE
                                    &trans &kp N0  &trans         &trans    &trans    &trans
