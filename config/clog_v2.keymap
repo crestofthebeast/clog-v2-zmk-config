@@ -110,7 +110,7 @@
             key-positions = <6 15>;
             bindings = <&caps_word>;
             layers = <0>;
-	}
+	};
 	
     };
 
