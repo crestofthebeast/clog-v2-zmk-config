@@ -104,9 +104,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp W       &kp M        &kp P          &kp B            &kp J  &kp K        &quomma          &dang
+                                 &kp W       &kp F        &kp P          &kp B            &kp J  &kp K        &quomma          &dang
             &kp BSLH &kp R       &gqt LALT S &mt  LSHFT N &gqt LCTRL T   &kp G            &kp V  &gqt RCTRL H &mt RSHFT A      &gqt RALT I &kp O  &kp FSLH
-                     &kp X       &kp C       &gqt LGUI F  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &dqt
+                     &kp X       &kp C       &gqt LGUI M  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &kp dqt
                                                &kp C_MUTE  &lt ENTER FN  &lt SPC NAV      &lt E SYM &lt SQT NUM   &none
             >;
 
@@ -126,10 +126,10 @@
        
         NAV_layer {
             bindings = <
-                                  &none     &none        &none        &kp PG_UP            &kp PG_DN &none         &none         &kp TAB
-            &none      &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none                &kp PG_DN &kp LEFT      &kp DOWN      &kp RIGHT &kp INS &none
+                                  &none     &none        &kp tab      &kp PG_UP            &kp PG_DN &none         &none         &kp TAB
+            &none      &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none                &none     &kp LEFT      &kp DOWN      &kp RIGHT &kp INS &none
                        &kp HOME   &none     &sk LGUI     &none        &kp PG_UP            &kp PG_DN &kp BSPC      &kp UP        &kp DEL   &kp END
-                                            &trans       &none        &kp PG_DN            &trans    &none         &trans
+                                            &trans       &none        &none                &trans    &none         &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -137,10 +137,10 @@
 	
 	NUM_layer {
             bindings = <
-                                  &none     &none        &none        &kp PG_UP            &kp PG_DN &none         &none         &kp TAB
-            &none      &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none                &kp PG_DN &kp LEFT      &kp DOWN      &kp RIGHT &kp INS &none
+                                  &none     &none        &kp tab      &kp PG_UP            &kp PG_DN &none         &none         &kp TAB
+            &none      &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none                &none     &kp LEFT      &kp DOWN      &kp RIGHT &kp INS &none
                        &kp HOME   &none     &sk LGUI     &none        &kp PG_UP            &kp PG_DN &kp BSPC      &kp UP        &kp DEL   &kp END
-                                            &trans       &none        &kp PG_DN            &trans    &none         &trans
+                                            &trans       &none        &none                &trans    &none         &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -148,9 +148,9 @@
 
         FN_layer {
             bindings = <
-                              &kp F7 &kp F8 &kp F9 &kp F10      &none  &kp C_BRI_DN &kp C_BRI_UP &none
-            &reset &bt BT_CLR &kp F1 &kp F2 &kp F3 &kp F11      &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR &reset
-                   &kp PSCRN  &kp F4 &kp F5 &kp F6 &kp F12      &none  &none        &bt BT_SEL 3 &bt BT_SEL 4 &none
+                                   &kp F7 &kp F8 &kp F9 &kp F10      &none  &kp C_BRI_DN &kp C_BRI_UP &none
+            &bootloader &bt BT_CLR &kp F1 &kp F2 &kp F3 &kp F11      &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR &bootloader
+                        &kp PSCRN  &kp F4 &kp F5 &kp F6 &kp F12      &none  &none        &bt BT_SEL 3 &bt BT_SEL 4 &none
                                      &trans &trans &trans       &trans &trans       &trans
             >;
 
