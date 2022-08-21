@@ -5,10 +5,18 @@
 #define MAIN 0
 #define SYM 1
 #define NAV 2
-#define FN 3
+#define NUM 3
+#define FN 4
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
+    retro-tap;
+    quick-tap-ms = <125>;
+    tapping_term_ms = <175>;
+};
+
+&lt {
+    flavor = "tap-preferred";
     retro-tap;
     quick-tap-ms = <125>;
     tapping_term_ms = <175>;
@@ -16,26 +24,6 @@
 
 / {
 	
-    macros {
-        lw_macro: lw_macro {
-        compatible = "zmk,behavior-macro";
-        label = "ZM_lw_macro";
-        #binding-cells = <0>;
-        wait-ms = <30>;
-        tap-ms = <40>;
-        bindings = <&kp L &kp W>;
-    	};
-	
-	wl_macro: wl_macro {
-        compatible = "zmk,behavior-macro";
-        label = "ZM_wl_macro";
-        #binding-cells = <0>;
-        wait-ms = <30>;
-        tap-ms = <40>;
-        bindings = <&kp W &kp L>;
-    	};
-    };
-    
     behaviors {
 
         skq: sticky_key_quick_release {
@@ -58,25 +46,6 @@
 	    bindings = <&kp>, <&kp>;
 	};
 	
-	weirdgqt: weird-global-quick-tap {
-	    compatible = "zmk,behavior-hold-tap";
-	    label = "WEIRD_GLOBAL_QUICK_TAP";
-	    #binding-cells = <2>;
-	    flavor = "tap-preferred";
-	    tapping-term-ms = <200>;
-	    quick-tap-ms = <125>;
-	    global-quick-tap;
-	    bindings = <&kp>, <&slang>;
-	};
-	
-	slang: slash_bang {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_BANG";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp EXCL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
 	quomma: comma_question {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QUESTION";
@@ -85,29 +54,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	stot: star_dot {
+	dang: dot_bang {
             compatible = "zmk,behavior-mod-morph";
-            label = "STAR_DOT";
+            label = "DOT_BANG";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp STAR>;
+            bindings = <&kp DOT>, <&kp BANG>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	sqtave: sqt_grave {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SQT_GRAVE";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp GRAVE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
-	quipe: dquote_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DQUOTE_PIPE";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp PIPE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
 /*                KEY POSITIONS
@@ -121,110 +75,21 @@
 
     combos {
         compatible = "zmk,combos";
+	
         combo_q {
             timeout-ms = <30>;
-            key-positions = <22 23>;
+            key-positions = <21 22>;
             bindings = <&kp Q>;
             layers = <0>;
         };
 	
-	combo_wl {
+	combo_z {
             timeout-ms = <30>;
-            key-positions = <21 23>;
-            bindings = <&wl_macro>;
-            layers = <0>;
-        };
-	
-	combo_lw {
-            timeout-ms = <30>;
-            key-positions = <0 3>;
-            bindings = <&lw_macro>;
-            layers = <0>;
-        };
-	
-        combo_z {
-            timeout-ms = <30>;
-            key-positions = <21 22>;
+            key-positions = <22 23>;
             bindings = <&kp Z>;
             layers = <0>;
         };
 	
-	combo_j {
-            timeout-ms = <30>;
-            key-positions = <1 2>;
-            bindings = <&kp J>;
-            layers = <0>;
-        };
-	
-	combo_colon {
-            timeout-ms = <30>;
-            key-positions = <0 1>;
-            bindings = <&kp COLON>;
-            layers = <0>;
-        };
-	
-	combo_hash {
-            timeout-ms = <30>;
-            key-positions = <5 6>;
-            bindings = <&kp HASH>;
-            layers = <0>;
-        };
-	
-	combo_underscore {
-            timeout-ms = <30>;
-            key-positions = <27 28>;
-            bindings = <&kp UNDER>;
-            layers = <0>;
-        };
-	
-	combo_minus {
-            timeout-ms = <30>;
-            key-positions = <26 27>;
-            bindings = <&kp MINUS>;
-            layers = <0>;
-        };
-	
-	combo_esc {
-            timeout-ms = <30>;
-            key-positions = <1 12>;
-            bindings = <&kp ESC>;
-            layers = <0>;
-        };
-	
-	combo_enter {
-            timeout-ms = <30>;
-            key-positions = <6 15>;
-            bindings = <&kp ENTER>;
-            layers = <0>;
-        };
-	
-	combo_repeat {
-            timeout-ms = <30>;
-            key-positions = <11 23>;
-            bindings = <&key_repeat>;
-            layers = <0>;
-        };
-	
-	combo_repeat2 {
-            timeout-ms = <30>;
-            key-positions = <16 26>;
-            bindings = <&key_repeat>;
-            layers = <0>;
-        };
-	
-	combo_dollar {
-            timeout-ms = <30>;
-            key-positions = <11 12>;
-            bindings = <&kp DOLLAR>;
-            layers = <1>;
-        };
-	
-	combo_bslsh {
-            timeout-ms = <30>;
-            key-positions = <10 11>;
-            bindings = <&kp BSLH>;
-            layers = <1>;
-        };
     };
 
     keymap {
@@ -232,10 +97,10 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp L       &kp Y        &kp D        &kp K            &kp X  &kp F        &kp O            &kp U
-            &quipe   &kp C       &gqt LALT R &gqt LSHFT S &gqt LCTRL T &kp B            &kp M  &gqt RCTRL N &gqt RSHFT E     &gqt RALT I &kp A  &sqtave
-                     &kp G       &kp W       &gqt LGUI V  &kp P        &kp K            &kp X  &kp H        &weirdgqt RGUI 0 &quomma     &stot
-                                               &kp C_MUTE  &mo NAV  &kp SPC     &skq RSHFT &mo SYM   &none
+                                 &kp W       &kp M        &kp P          &kp B            &kp J  &kp K        &quomma          &dang
+            &BSLH    &kp R       &gqt LALT S &mt  LSHFT N &gqt LCTRL T   &kp G            &kp V  &gqt RCTRL H &mt RSHFT A      &gqt RALT I &kp O  &FSLH
+                     &kp X       &kp C       &gqt LGUI F  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &dqt
+                                               &kp C_MUTE  &lt ENTER FUN &lt SPC NAV      &lt E SYM &lt SQT NUM   &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -253,6 +118,17 @@
        };
        
         NAV_layer {
+            bindings = <
+                                  &none     &none        &none        &kp PG_UP            &kp PG_DN &none         &none         &kp TAB
+            &none      &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none                &kp PG_DN &kp LEFT      &kp DOWN      &kp RIGHT &kp INS &none
+                       &kp HOME   &none     &sk LGUI     &none        &kp PG_UP            &kp PG_DN &kp BSPC      &kp UP        &kp DEL   &kp END
+                                            &trans       &none        &kp PG_DN            &trans    &none         &trans
+            >;
+
+			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+        };
+	
+	NUM_layer {
             bindings = <
                                   &none     &none        &none        &kp PG_UP            &kp PG_DN &none         &none         &kp TAB
             &none      &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none                &kp PG_DN &kp LEFT      &kp DOWN      &kp RIGHT &kp INS &none
