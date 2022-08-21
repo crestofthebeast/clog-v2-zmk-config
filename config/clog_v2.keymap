@@ -165,8 +165,8 @@
             bindings = <
                                    &kp F7 &kp F8 &kp F9 &kp F10      &none         &kp C_BRI_DN &kp C_BRI_UP &none
             &bootloader &reset     &kp F1 &kp F2 &kp F3 &kp F11      &kp C_VOL_UP  &bt BT_NXT   &bt BT_PRV   &none   &reset  &bootloader
-                        &kp PSCRN  &kp F4 &kp F5 &kp F6 &kp F12      &kp C_VOL_DN  &bt BT_CLR   &out OUT_TOG &none   &none
-                                     &trans &trans &trans       &trans &trans       &trans
+                        &kp PSCRN  &kp F4 &kp F5 &kp F6 &kp F12      &kp C_VOL_DN  &bt BT_CLR   &none        &none   &none
+                                           &trans &trans &trans      &trans &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
