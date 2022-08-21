@@ -82,11 +82,18 @@
             bindings = <&kp Q>;
             layers = <0>;
         };
-	
+
 	combo_z {
             timeout-ms = <30>;
             key-positions = <22 23>;
             bindings = <&kp Z>;
+            layers = <0>;
+        };
+	
+	combo_esc {
+            timeout-ms = <30>;
+            key-positions = <1 12>;
+            bindings = <&kp ESCAPE>;
             layers = <0>;
         };
 	
@@ -100,7 +107,7 @@
                                  &kp W       &kp M        &kp P          &kp B            &kp J  &kp K        &quomma          &dang
             &kp BSLH &kp R       &gqt LALT S &mt  LSHFT N &gqt LCTRL T   &kp G            &kp V  &gqt RCTRL H &mt RSHFT A      &gqt RALT I &kp O  &kp FSLH
                      &kp X       &kp C       &gqt LGUI F  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &dqt
-                                               &kp C_MUTE  &lt ENTER FUN &lt SPC NAV      &lt E SYM &lt SQT NUM   &none
+                                               &kp C_MUTE  &lt ENTER FN  &lt SPC NAV      &lt E SYM &lt SQT NUM   &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
