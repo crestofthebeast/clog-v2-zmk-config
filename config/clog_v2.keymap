@@ -105,6 +105,13 @@
             layers = <0>;
         };
 	
+	combo_capsword {
+	    timeout-ms = <30>;
+            key-positions = <6 15>;
+            bindings = <&caps_word>;
+            layers = <0>;
+	}
+	
     };
 
     keymap {
@@ -114,7 +121,7 @@
             bindings = <
                                  &kp W       &kp F        &kp P          &kp B            &kp J  &kp K        &quomma          &dang
             &kp BSLH &kp R       &gqt LALT S &mt  LSHFT N &gqt LCTRL T   &kp G            &kp V  &gqt RCTRL H &mt RSHFT A      &gqt RALT I &kp O  &kp FSLH
-                     &kp X       &kp C       &gqt LGUI M  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &kp DQT
+                     &kp X       &kp C       &gqt LGUI M  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &dques
                                                &kp C_MUTE  &lt ENTER FN  &lt SPC NAV      &lt E SYM &lt SQT NUM   &none
             >;
 
@@ -156,9 +163,9 @@
 
         FN_layer {
             bindings = <
-                                   &kp F7 &kp F8 &kp F9 &kp F10      &none  &kp C_BRI_DN &kp C_BRI_UP &none
-            &bootloader &bt BT_CLR &kp F1 &kp F2 &kp F3 &kp F11      &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR &bootloader
-                        &kp PSCRN  &kp F4 &kp F5 &kp F6 &kp F12      &none  &none        &bt BT_SEL 3 &bt BT_SEL 4 &none
+                                   &kp F7 &kp F8 &kp F9 &kp F10      &none      &kp C_BRI_DN &kp C_BRI_UP &none
+            &bootloader &reset     &kp F1 &kp F2 &kp F3 &kp F11      &C_VOL_UP  &bt BT_NXT   &bt BT_PRV   &none   &reset  &bootloader
+                        &kp PSCRN  &kp F4 &kp F5 &kp F6 &kp F12      &C_VOL_DN  &bt BT_CLR   &out OUT_TOG &none   &none
                                      &trans &trans &trans       &trans &trans       &trans
             >;
 
