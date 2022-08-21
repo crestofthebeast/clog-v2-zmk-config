@@ -106,7 +106,7 @@
             bindings = <
                                  &kp W       &kp F        &kp P          &kp B            &kp J  &kp K        &quomma          &dang
             &kp BSLH &kp R       &gqt LALT S &mt  LSHFT N &gqt LCTRL T   &kp G            &kp V  &gqt RCTRL H &mt RSHFT A      &gqt RALT I &kp O  &kp FSLH
-                     &kp X       &kp C       &gqt LGUI M  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &kp dqt
+                     &kp X       &kp C       &gqt LGUI M  &kp D          &kp B            &kp J  &kp L        &kp U            &kp Y       &kp DQT
                                                &kp C_MUTE  &lt ENTER FN  &lt SPC NAV      &lt E SYM &lt SQT NUM   &none
             >;
 
