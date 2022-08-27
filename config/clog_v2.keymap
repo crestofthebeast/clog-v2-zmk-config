@@ -183,8 +183,8 @@
         MAIN_layer {
             bindings = <
                                  &kp F       &kp G        &kp D          &kp V            &parens       &kp L        &kp U              &kp Y
-            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp K            &undsmin      &gqt RCTRL N &mt RSHFT A        &gqt RALT I &kp O  &bsland
-                     &kp X       &kp C       &gqt LGUI M  &kp P          &kp B            &slashterisk  &kp W        &quommagqt RGUI 0  &dang       &kp DQT
+            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp B            &undsmin      &gqt RCTRL N &mt RSHFT A        &gqt RALT I &kp O  &bsland
+                     &kp X       &kp C       &gqt LGUI M  &kp P          &kp K            &slashterisk  &kp W        &quommagqt RGUI 0  &dang       &kp DQT
                                                &kp C_MUTE  &lt FN ENTER  &lt NAV SPC      &lt SYM E &lt NUM SQT &none
             >;
 
