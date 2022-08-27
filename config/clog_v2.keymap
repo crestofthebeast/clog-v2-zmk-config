@@ -70,6 +70,17 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
+	quommagqt: quomma-global-quick-tap {
+	    compatible = "zmk,behavior-hold-tap";
+	    label = "QUOMMA_GLOBAL_QUICK_TAP";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <200>;
+	    quick-tap-ms = <125>;
+	    global-quick-tap;
+	    bindings = <&kp>, <&quomma>;
+	};
+	
     };
 
 /*                KEY POSITIONS
@@ -112,6 +123,26 @@
             layers = <0>;
 	};
 	
+	combo_scln {
+	    timeout-ms = <30>;
+            key-positions = <26 27>;
+            bindings = <&kp SEMI>;
+            layers = <0>;
+	};
+	
+	combo_cln {
+	    timeout-ms = <30>;
+            key-positions = <27 28>;
+            bindings = <&kp COLON>;
+            layers = <0>;
+	};
+	
+	combo_grave {
+	    timeout-ms = <30>;
+            key-positions = <0 1>;
+            bindings = <&kp GRAVE>;
+            layers = <0>;
+	};
     };
 
     keymap {
@@ -119,9 +150,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp F       &kp G        &kp D          &kp X            &kp X  &kp L        &kp U         &kp Y
-            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp K            &kp X  &gqt RCTRL N &mt RSHFT A   &gqt RALT I &kp O  &kp BSLH
-                     &kp V       &kp C       &gqt LGUI M  &kp P          &kp B            &kp X  &kp W        &quomma       &dang       &kp DQT
+                                 &kp F       &kp G        &kp D          &kp X            &kp X  &kp L        &kp U              &kp Y
+            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp K            &kp X  &gqt RCTRL N &mt RSHFT A        &gqt RALT I &kp O  &kp BSLH
+                     &kp V       &kp C       &gqt LGUI M  &kp P          &kp B            &kp X  &kp W        &quommagqt RGUI 0  &dang       &kp DQT
                                                &kp C_MUTE  &lt FN ENTER  &lt NAV SPC      &lt SYM E &lt NUM SQT &none
             >;
 
