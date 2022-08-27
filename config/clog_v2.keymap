@@ -70,6 +70,38 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
+	parens: lpar_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_RPAR";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
+	undsmin: unds_min {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDS_MIN";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
+	slashterisk: slash_asterisk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_ASTERISK";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&kp STAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
+	bsland: bslh_amps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSLH_AMPS";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
 	quommagqt: quomma-global-quick-tap {
 	    compatible = "zmk,behavior-hold-tap";
 	    label = "QUOMMA_GLOBAL_QUICK_TAP";
@@ -150,9 +182,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp F       &kp G        &kp D          &kp X            &kp X  &kp L        &kp U              &kp Y
-            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp K            &kp X  &gqt RCTRL N &mt RSHFT A        &gqt RALT I &kp O  &kp BSLH
-                     &kp V       &kp C       &gqt LGUI M  &kp P          &kp B            &kp X  &kp W        &quommagqt RGUI 0  &dang       &kp DQT
+                                 &kp F       &kp G        &kp D          &kp X            &parens       &kp L        &kp U              &kp Y
+            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp K            &undsmin      &gqt RCTRL N &mt RSHFT A        &gqt RALT I &kp O  &bsland
+                     &kp V       &kp C       &gqt LGUI M  &kp P          &kp B            &slashterisk  &kp W        &quommagqt RGUI 0  &dang       &kp DQT
                                                &kp C_MUTE  &lt FN ENTER  &lt NAV SPC      &lt SYM E &lt NUM SQT &none
             >;
 
