@@ -78,7 +78,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	undshash : unds_hash {
+	undshash: unds_hash {
             compatible = "zmk,behavior-mod-morph";
             label = "UNDS_HASH";
             #binding-cells = <0>;
