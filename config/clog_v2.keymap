@@ -5,7 +5,7 @@
 #define MAIN 0
 #define SYM 1
 #define NAV 2
-#define NUM 3
+#define MAC 3
 #define FN 4
 
 &mt {
@@ -78,11 +78,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	undsmin: unds_min {
+	undshash : unds_hash {
             compatible = "zmk,behavior-mod-morph";
-            label = "UNDS_MIN";
+            label = "UNDS_HASH";
             #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&kp MINUS>;
+            bindings = <&kp UNDER>, <&kp HASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
@@ -99,6 +99,14 @@
             label = "BSLH_AMPS";
             #binding-cells = <0>;
             bindings = <&kp BSLH>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
+	dquipe: dqt_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DQT_PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
@@ -157,7 +165,7 @@
 	
 	combo_scln {
 	    timeout-ms = <30>;
-            key-positions = <26 27>;
+            key-positions = <6 7>;
             bindings = <&kp SEMI>;
             layers = <0>;
 	};
@@ -175,6 +183,13 @@
             bindings = <&kp GRAVE>;
             layers = <0>;
 	};
+	
+	combo_mins {
+	    timeout-ms = <30>;
+            key-positions = <26 27>;
+            bindings = <&kp MINUS>;
+            layers = <0>;
+	}
     };
 
     keymap {
@@ -182,10 +197,10 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp F       &kp G        &kp D          &kp V            &parens       &kp L        &kp U              &kp Y
-            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp B            &undsmin      &gqt RCTRL N &mt RSHFT A        &gqt RALT I &kp O  &bsland
-                     &kp X       &kp C       &gqt LGUI M  &kp P          &kp K            &slashterisk  &kp W        &quommagqt RGUI 0  &dang       &kp DQT
-                                               &kp C_MUTE  &lt FN ENTER  &lt NAV SPC      &lt SYM E &lt NUM SQT &none
+                                 &kp C       &kp M        &kp P          &kp X            &parens      &kp V        &quomma      &dang
+            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp B            &undshash    &gqt RCTRL N &mt RSHFT A  &gqt RALT I &kp O  &bsland
+                     &kp W       &kp F       &gqt LGUI G  &kp D          &kp K            &slashterisk &kp L        &gqt RGUI U  &kp Y       &dquipe
+                                               &kp C_MUTE  &lt FN ENTER  &lt NAV SPC      &lt SYM E &lt MAC SQT &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -194,9 +209,9 @@
         SYM_layer {
             bindings = <
                             &kp N7 &kp N8 &kp N9 &none      &none    &kp RBRC   &kp RBKT  &kp AT
-            &none &none     &kp N3 &kp N2 &kp N1 &none      &kp PIPE &kp LBRC   &kp LBKT  &kp HASH  &none  &none
+            &none &none     &kp N3 &kp N2 &kp N1 &kp N0     &kp PIPE &kp LBRC   &kp LBKT  &kp HASH  &none  &none
                   &none     &kp N4 &kp N5 &kp N6 &none      &none    &kp DOLLAR &kp PRCNT &kp EQUAL &none
-                                     &trans &trans  &trans         &trans    &trans    &trans
+                                     &trans &kp N0  &trans         &trans    &trans    &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -213,12 +228,12 @@
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 	
-	NUM_layer {
+	MAC_layer {
             bindings = <
-                                  &none     &none        &none        &none                &none     &none        &none       &none
-            &none      &kp N6     &kp N4    &kp N0       &kp N2       &none                &none     &kp N3       &kp N1      &kp N5    &kp N7  &none
-                       &none      &none     &none        &kp N8       &none                &none     &kp N9       &none       &none     &none
-                                            &trans       &none        &none                &trans    &none         &trans
+                                &none   &none   &none   &none         &none   &none   &none  &none
+            &none      &none    &none   &none   &none   &none         &none   &none   &none  &none   &none   &none
+                       &none    &none   &none   &none   &none         &none   &none   &none  &none   &none
+                                        &trans  &none   &trans        &trans  &none  &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
