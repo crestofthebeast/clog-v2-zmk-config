@@ -209,7 +209,7 @@
         SYM_layer {
             bindings = <
                             &kp N7 &kp N8 &kp N9 &none      &none      &kp LT     &kp GT    &kp EQUAL
-            &none &none     &kp N3 &kp N2 &kp N1 &kp N0     &kp DOLLAR &kp LBRC   &kp LBKT  &kp HASH    &none  &none
+            &none &none     &kp N3 &kp N2 &kp N1 &kp N0     &kp DOLLAR &kp LBRC   &kp LBKT  &kp HASH    &kp AT  &none
                   &none     &kp N4 &kp N5 &kp N6 &none      &none      &kp RBRC   &kp RBKT  &kp PERCENT &none
                                      &trans &kp N0  &trans         &trans    &trans    &trans
             >;
