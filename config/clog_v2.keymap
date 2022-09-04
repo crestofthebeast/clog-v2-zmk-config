@@ -11,28 +11,6 @@
 #define MAC 3
 #define FN 4
 
-#define QUICK_TAP_MS 175
-
-// hrm stuff
-
-ZMK_BEHAVIOR(hml, hold_tap,  // left-hand HRMs
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    global-quick-tap-ms = <150>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-on-release;  // requires PR #1423
-)
-
-ZMK_BEHAVIOR(hmr, hold_tap,  // right-hand HRMs
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    global-quick-tap-ms = <150>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-on-release;  // requires PR #1423
-)
-
 
 &mt {
     flavor = "tap-preferred";
