@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 #include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/keypos_def/keypos_34keys.h"
 
 #define MAIN 0
 #define SYM 1
