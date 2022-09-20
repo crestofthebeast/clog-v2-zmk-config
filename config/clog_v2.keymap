@@ -89,29 +89,40 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	sqtamp: sqt_amp {
+	slashterisk: slash_asterisk {
             compatible = "zmk,behavior-mod-morph";
-            label = "SQT_AMP";
+            label = "SLASH_ASTERISK";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp AMPS>;
+            bindings = <&kp FSLH>, <&kp STAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	minsgrave: mins_grave {
+	bsland: bslh_amps {
             compatible = "zmk,behavior-mod-morph";
-            label = "MINS_GRAVE";
+            label = "BSLH_AMPS";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp GRAVE>;
+            bindings = <&kp BSLH>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	dqstar: dqt_star {
+	dquipe: dqt_pipe {
             compatible = "zmk,behavior-mod-morph";
-            label = "DQT_STAR";
+            label = "DQT_PIPE";
             #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp STAR>;
+            bindings = <&kp DQT>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+	
+	quommagqt: quomma-global-quick-tap {
+	    compatible = "zmk,behavior-hold-tap";
+	    label = "QUOMMA_GLOBAL_QUICK_TAP";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <200>;
+	    quick-tap-ms = <125>;
+	    global-quick-tap;
+	    bindings = <&kp>, <&quomma>;
+	};
 	
     };
 
@@ -129,7 +140,7 @@
 	
         combo_q {
             timeout-ms = <30>;
-            key-positions = <1 2>;
+            key-positions = <21 22>;
             bindings = <&kp Q>;
             layers = <0>;
         };
@@ -141,23 +152,23 @@
             layers = <0>;
         };
 	
-	combo_j {
-            timeout-ms = <30>;
-            key-positions = <21 22>;
-            bindings = <&kp J>;
-            layers = <0>;
-        };
-	
 	combo_esc {
             timeout-ms = <30>;
             key-positions = <1 12>;
             bindings = <&kp ESCAPE>;
             layers = <0>;
         };
-
+	
+	combo_capsword {
+	    timeout-ms = <30>;
+            key-positions = <6 15>;
+            bindings = <&caps_word>;
+            layers = <0>;
+	};
+	
 	combo_scln {
 	    timeout-ms = <30>;
-            key-positions = <26 27>;
+            key-positions = <6 7>;
             bindings = <&kp SEMI>;
             layers = <0>;
 	};
@@ -169,16 +180,16 @@
             layers = <0>;
 	};
 	
-	combo_enter {
+	combo_grave {
 	    timeout-ms = <30>;
             key-positions = <0 1>;
-            bindings = <&kp ENTER>;
+            bindings = <&kp GRAVE>;
             layers = <0>;
 	};
 	
 	combo_mins {
 	    timeout-ms = <30>;
-            key-positions = <5 6>;
+            key-positions = <26 27>;
             bindings = <&kp MINUS>;
             layers = <0>;
 	};
@@ -189,10 +200,10 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp F       &kp M        &kp P          &kp V            &parens      &dang        &undshash    &dqstar
-            &kp X    &kp R       &gqt LALT S &gqt LSHFT N &gqt LCTRL T   &kp B            &quomma      &gqt RCTRL A &gqt RSHFT E &gqt RALT I &kp H  &sqtamp
-                     &kp W       &kp C       &gqt LGUI L  &kp D          &kp G            &minsgrave   &kp U        &gqt RGUI O  &kp Y       &kp K
-                                               &kp C_MUTE  &mo NAV     &kp SPC            &skq LSHFT   &mo SYM &none
+                                 &kp W       &kp F        &kp P          &kp V            &parens      &kp M        &quomma      &dang
+            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp B            &undshash    &gqt RCTRL N &mt RSHFT A  &gqt RALT I &kp O  &bsland
+                     &kp X       &kp C       &gqt LGUI G  &kp D          &kp K            &slashterisk &kp L        &gqt RGUI U  &kp Y       &dquipe
+                                               &kp C_MUTE  &lt FN ENTER  &lt NAV SPC      &lt SYM E &lt MAC SQT &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
