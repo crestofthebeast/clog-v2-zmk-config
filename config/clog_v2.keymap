@@ -161,7 +161,7 @@
 	
 	combo_esc {
             timeout-ms = <30>;
-            key-positions = <30 31>;
+            key-positions = <21 22>;
             bindings = <&kp ESCAPE>;
             layers = <0>;
         };
