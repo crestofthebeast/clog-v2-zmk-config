@@ -222,9 +222,9 @@
        
         NAV_layer {
             bindings = <
-                              &kp ESC   &kp TAB      &kp TAB      &none         &none   &kp DEL   &PG_DN    &kp PG_UP
-           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none         &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp INS &none
-                   &none      &none     &sk LGUI     &none        &none         &none   &kp BSPC  &kp UP    &kp HOME  &kp END
+                              &kp ESC   &kp TAB      &kp TAB      &none         &none   &kp DEL   &kp PG_DN  &kp PG_UP
+           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none         &none   &kp LEFT  &kp DOWN   &kp RIGHT &kp INS &none
+                   &none      &none     &sk LGUI     &none        &none         &none   &kp BSPC  &kp UP     &kp HOME  &kp END
                                         &trans       &none        &none         &trans  &none      &trans
             >;
 
