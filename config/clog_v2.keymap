@@ -152,6 +152,13 @@
             layers = <0>;
         };
 	
+	combo_bsp {
+            timeout-ms = <30>;
+            key-positions = <5 6>;
+            bindings = <&kp BSPC>;
+            layers = <0>;
+        };
+	
 	combo_esc {
             timeout-ms = <30>;
             key-positions = <30 31>;
@@ -215,6 +222,34 @@
             layers = <0>;
 	};
 	
+	combo_ocrl {
+	    timeout-ms = <30>;
+            key-positions = <2 12>;
+            bindings = <&kp LBRC>;
+            layers = <0>;
+	};
+	
+	combo_ccrl {
+	    timeout-ms = <30>;
+            key-positions = <5 15>;
+            bindings = <&kp RBRC>;
+            layers = <0>;
+	};
+	
+	combo_lbkt {
+	    timeout-ms = <30>;
+            key-positions = <0 10>;
+            bindings = <&kp LBKT>;
+            layers = <0>;
+	};
+	
+	combo_rbkt {
+	    timeout-ms = <30>;
+            key-positions = <7 17>;
+            bindings = <&kp RBKT>;
+            layers = <0>;
+	};
+	
     };
 
     keymap {
@@ -223,7 +258,7 @@
         MAIN_layer {
             bindings = <
                                  &kp W       &kp F        &kp P          &kp V            &parens      &kp M        &quomma      &dang
-            &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp B            &undshash    &gqt RCTRL N &mt RSHFT A  &gqt RALT I &kp O  &bsland
+            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp B            &undshash    &gqt RCTRL N &gqt RSHFT A &gqt RALT I &kp O  &bsland
                      &kp X       &kp C       &gqt LGUI G  &kp D          &kp K            &slashterisk &kp L        &gqt RGUI U  &kp Y       &dquipe
                                               &kp C_MUTE  &lt MSE ENTER  &lt NAV SPC      &lt SYM E &lt FUN SQT &none
             >;
