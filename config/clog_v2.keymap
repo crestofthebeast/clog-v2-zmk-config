@@ -140,7 +140,7 @@
 	
         combo_q {
             timeout-ms = <30>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
             bindings = <&kp Q>;
             layers = <0>;
         };
