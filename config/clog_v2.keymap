@@ -8,7 +8,7 @@
 #define SYM 1
 #define NAV 2
 #define MAC 3
-#define FN 4
+#define FUN 4
 
 
 &mt {
@@ -203,7 +203,7 @@
                                  &kp W       &kp F        &kp P          &kp V            &parens      &kp M        &quomma      &dang
             &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp B            &undshash    &gqt RCTRL N &mt RSHFT A  &gqt RALT I &kp O  &bsland
                      &kp X       &kp C       &gqt LGUI G  &kp D          &kp K            &slashterisk &kp L        &gqt RGUI U  &kp Y       &dquipe
-                                               &kp C_MUTE  &lt FN ENTER  &lt NAV SPC      &lt SYM E &lt MAC SQT &none
+                                               &kp C_MUTE  &lt MSE ENTER  &lt NAV SPC      &lt SYM E &lt FUN SQT &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -211,10 +211,10 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9 &kp SLASH         &none      &kp LT     &kp GT    &kp EQUAL
-            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp PLUS          &kp DOLLAR &kp LBRC   &kp LBKT  &kp PERCENT   &kp PIPE  &none
-                  &none     &kp N4 &kp N5 &kp N6 &kp BSLH          &none      &kp RBRC   &kp RBKT  &kp AT        &none
-                                     &trans &kp N0  &trans         &trans    &trans    &trans
+                            &kp N7 &kp N8 &kp N9 &none         &none      &kp CARET  &kp PLUS  &kp EQUAL
+            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &kp DOLLAR &kp COLON  &kp SEMI  &kp PERCENT   &kp TILDE  &none
+                  &none     &kp N4 &kp N5 &kp N6 &none         &none      &kp LT     &kp GT    &kp AT        &none
+                                   &trans &kp N0 &trans        &trans    &trans    &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -231,7 +231,7 @@
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 	
-	MAC_layer {
+	MSE_layer {
             bindings = <
                                 &none   &none   &none   &none         &none   &none   &none  &none
             &none      &none    &none   &none   &none   &none         &none   &none   &none  &none   &none   &none
@@ -242,11 +242,11 @@
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 
-        FN_layer {
+        FUN_layer {
             bindings = <
-                                   &kp F7 &kp F8 &kp F9 &kp F10      &none         &kp C_BRI_DN &kp C_BRI_UP &none
-            &bootloader &reset     &kp F1 &kp F2 &kp F3 &kp F11      &kp C_VOL_UP  &bt BT_NXT   &bt BT_PRV   &none   &reset  &bootloader
-                        &kp PSCRN  &kp F4 &kp F5 &kp F6 &kp F12      &kp C_VOL_DN  &bt BT_CLR   &none        &none   &none
+                                  &kp F7 &kp F8 &kp F9 &kp F10       &kp F4 &kp F5 &kp F6 &kp F12  &none
+            &bootloader &reset    &kp F1 &kp F2 &kp F3 &kp F11       &kp F4 &kp F5 &kp F6 &kp F12  &reset  &bootloader
+                        &reset    &kp F4 &kp F5 &kp F6 &kp F12       &kp F4 &kp F5 &kp F6 &kp F12  &reset
                                            &trans &trans &trans      &trans &trans &trans
             >;
 
