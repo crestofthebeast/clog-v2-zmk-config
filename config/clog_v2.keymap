@@ -7,7 +7,7 @@
 #define MAIN 0
 #define SYM 1
 #define NAV 2
-#define MAC 3
+#define MSE 3
 #define FUN 4
 
 
@@ -203,7 +203,7 @@
                                  &kp W       &kp F        &kp P          &kp V            &parens      &kp M        &quomma      &dang
             &kp J    &kp R       &gqt LALT S &mt  LSHFT T &gqt LCTRL H   &kp B            &undshash    &gqt RCTRL N &mt RSHFT A  &gqt RALT I &kp O  &bsland
                      &kp X       &kp C       &gqt LGUI G  &kp D          &kp K            &slashterisk &kp L        &gqt RGUI U  &kp Y       &dquipe
-                                               &kp C_MUTE  &lt MSE ENTER  &lt NAV SPC      &lt SYM E &lt FUN SQT &none
+                                              &kp C_MUTE  &lt MSE ENTER  &lt NAV SPC      &lt SYM E &lt FUN SQT &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -222,10 +222,10 @@
        
         NAV_layer {
             bindings = <
-                                  &none     &kp TAB      &kp TAB      &kp PG_UP            &kp PG_DN &none         &none         &kp TAB
-           &bootloader &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none                &none     &kp LEFT      &kp DOWN      &kp RIGHT &kp INS &bootloader
-                       &kp HOME   &none     &sk LGUI     &none        &kp PG_DN            &kp PG_DN &kp BSPC      &kp UP        &kp DEL   &kp END
-                                            &trans       &none        &none                &trans    &none         &trans
+                              &kp ESC   &kp TAB      &kp TAB      &none         &none   &kp DEL   &PG_DN    &kp PG_UP
+           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL    &none         &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp INS &none
+                   &none      &none     &sk LGUI     &none        &none         &none   &kp BSPC  &kp UP    &kp HOME  &kp END
+                                        &trans       &none        &none         &trans  &none      &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -233,10 +233,10 @@
 	
 	MSE_layer {
             bindings = <
-                                &none   &none   &none   &none         &none   &none   &none  &none
-            &none      &none    &none   &none   &none   &none         &none   &none   &none  &none   &none   &none
-                       &none    &none   &none   &none   &none         &none   &none   &none  &none   &none
-                                        &trans  &none   &trans        &trans  &none  &trans
+                                 &none   &none   &none   &none         &none   &none   &none  &none
+            &bootloader  &none   &none   &none   &none   &none         &none   &none   &none  &none   &none   &bootloader
+                         &reset  &none   &none   &none   &none         &none   &none   &none  &none   &reset
+                                         &trans  &none   &trans        &trans  &none  &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
