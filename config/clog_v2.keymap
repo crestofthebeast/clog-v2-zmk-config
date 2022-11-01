@@ -290,10 +290,10 @@
 	
 	MSE_layer {
             bindings = <
-                                 &none   &none   &none   &none         &none   &none   &none  &none
-            &bootloader  &none   &none   &none   &none   &none         &none   &none   &none  &none   &none   &bootloader
-                         &reset  &none   &none   &none   &none         &none   &none   &none  &none   &reset
-                                         &trans  &none   &trans        &trans  &none  &trans
+                         &kp LS(LC(LA(F16)))   &kp LS(LC(LA(F15))) &none   &none         &none   &none   &none  &none
+            &bootloader  &none   &none   &none   &none   &none                           &none   &none   &none  &none   &none   &bootloader
+                         &reset  &none   &none   &none   &none                           &none   &none   &none  &none   &reset
+                                         &trans  &none   &trans                          &trans  &none  &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
