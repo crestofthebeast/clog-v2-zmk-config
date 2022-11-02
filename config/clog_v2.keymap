@@ -161,7 +161,7 @@
 	
 	combo_esc {
             timeout-ms = <30>;
-            key-positions = <21 22>;
+            key-positions = <1 12>;
             bindings = <&kp ESCAPE>;
             layers = <0>;
         };
@@ -173,12 +173,6 @@
             layers = <0>;
 	};
 	
-	combo_capslock {
-	    timeout-ms = <30>;
-            key-positions = <1 12>;
-            bindings = <&kp CAPS>;
-            layers = <0>;
-	};
 	
 	combo_grave {
 	    timeout-ms = <30>;
@@ -279,7 +273,7 @@
        
         NAV_layer {
             bindings = <
-                              &kp ESC   &kp TAB      &kp LS(LC(F22))  &none               &none   &kp DEL   &kp PG_DN  &kp PG_UP
+                              &kp CAPS  &kp TAB      &kp LS(LC(F22))  &none               &none   &kp DEL   &kp PG_DN  &kp PG_UP
            &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL        &kp LS(LC(F23))     &none   &kp LEFT  &kp DOWN   &kp RIGHT &kp INS &none
                    &none      &none     &sk LGUI     &none            &none               &none   &kp BSPC  &kp UP     &kp HOME  &kp END
                                         &trans       &none            &none               &trans  &none      &trans
