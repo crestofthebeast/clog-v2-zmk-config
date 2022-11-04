@@ -295,10 +295,10 @@
 
         FUN_layer {
             bindings = <
-                                  &kp F7 &kp F8 &kp F9 &kp F10       &kp F22 &kp F13 &kp F14 &kp F15  &none
+                                  &kp F7 &kp F8 &kp F9 &kp F10       &kp F22 &kp F13 &kp F14 &kp F15
             &bootloader &reset    &kp F1 &kp F2 &kp F3 &kp F11       &kp F23 &kp F16 &kp F17 &kp F18  &reset  &bootloader
                         &reset    &kp F4 &kp F5 &kp F6 &kp F12       &kp F24 &kp F19 &kp F20 &kp F21  &reset
-                                           &trans &trans &trans      &trans &trans &trans
+                                         &trans &trans &trans        &trans &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
