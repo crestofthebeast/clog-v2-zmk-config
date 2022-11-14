@@ -26,7 +26,21 @@
 };
 
 / {
-	
+
+    macros {
+    	oxford_comma: oxford_comma {
+	    label = "ZM_oxford_comma";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    bindings
+	        = <&macro_press &kp LSHFT>
+		, <&macro_tap &kp O>
+		, <&macro_release &kp LSHFT>
+		, <&macro_tap &kp X &kp F &kp O &kp R &kp D &kp SPC &kp C &kp O &kp M &kp M &kp A &kp DOT>
+		;
+	    };
+	};
+
     behaviors {
 
         skq: sticky_key_quick_release {
@@ -262,10 +276,10 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9 &none         &none      &kp CARET  &kp PLUS  &kp EQUAL
-            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &kp DOLLAR &kp COLON  &kp SEMI  &kp PERCENT   &kp TILDE  &none
-                  &none     &kp N4 &kp N5 &kp N6 &none         &none      &kp LT     &kp GT    &kp AT        &none
-                                   &trans &kp N0 &trans        &trans    &trans    &trans
+                            &kp N7 &kp N8 &kp N9 &none         &oxford_comma &kp CARET  &kp PLUS  &kp EQUAL
+            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &kp DOLLAR    &kp COLON  &kp SEMI  &kp PERCENT   &kp TILDE  &none
+                  &none     &kp N4 &kp N5 &kp N6 &none         &none         &kp LT     &kp GT    &kp AT        &none
+                                   &trans &kp N0 &trans        &trans        &trans     &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
