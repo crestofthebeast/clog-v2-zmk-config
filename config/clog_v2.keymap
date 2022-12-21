@@ -232,7 +232,7 @@
         SYM_layer {
             bindings = <
                             &kp N7 &kp N8 &kp N9 &kp TILDE     &oxford_comma &kp DOLLAR &kp PLUS  &kp GRAVE
-            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &undshash     &kp PERC   &kp STAR  &kp AT    &kp AMPS  &none
+            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &undshash     &kp PRCNT  &kp STAR  &kp AT    &kp AMPS  &none
                   &none     &kp N4 &kp N5 &kp N6 &kp CARET     &parens       &quomma    &dang     &kp SQT   &slipe
                                    &trans &kp N0 &trans        &trans        &trans     &trans
             >;
