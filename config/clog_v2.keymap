@@ -77,67 +77,35 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_BANG";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp BANG>;
+            bindings = <&kp DOT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	dques: dqt_perc {
+	colons: colon_semi {
             compatible = "zmk,behavior-mod-morph";
-            label = "DQT_PERC";
+            label = "COLON_SEMI";
             #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp PRCNT>;
+            bindings = <&kp COLON>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-	
-	parens: lpar_rpar {
+
+	slipe: slash_pipe {
             compatible = "zmk,behavior-mod-morph";
-            label = "LPAR_RPAR";
+            label = "SLASH_PIPE";
             #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
+            bindings = <&kp SLASH>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-	
-	undshash: unds_hash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UNDS_HASH";
-            #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&kp HASH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
-	slashterisk: slash_asterisk {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_ASTERISK";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp STAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
-	bsland: bslh_amps {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BSLH_AMPS";
-            #binding-cells = <0>;
-            bindings = <&kp BSLH>, <&kp AMPS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
-	dquipe: dqt_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DQT_PIPE";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp PIPE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
-	quommagqt: quomma-global-quick-tap {
+
+	danggqt: dang-global-quick-tap {
 	    compatible = "zmk,behavior-hold-tap";
-	    label = "QUOMMA_GLOBAL_QUICK_TAP";
+	    label = "DANG_GLOBAL_QUICK_TAP";
 	    #binding-cells = <2>;
 	    flavor = "tap-preferred";
 	    tapping-term-ms = <200>;
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
-	    bindings = <&kp>, <&quomma>;
+	    bindings = <&kp>, <&dang>;
 	};
 	
     };
@@ -170,7 +138,7 @@
 	
 	combo_bsp {
             timeout-ms = <30>;
-            key-positions = <5 6>;
+            key-positions = <0 1>;
             bindings = <&kp BSPC>;
             layers = <0>;
         };
@@ -189,46 +157,10 @@
             layers = <0>;
 	};
 	
-	
-	combo_grave {
-	    timeout-ms = <30>;
-            key-positions = <0 1>;
-            bindings = <&kp GRAVE>;
-            layers = <0>;
-	};
-	
 	combo_mins {
 	    timeout-ms = <30>;
-            key-positions = <6 7>;
+            key-positions = <27 28>;
             bindings = <&kp MINUS>;
-            layers = <0>;
-	};
-	
-	combo_rsft {
-	    timeout-ms = <30>;
-            key-positions = <1 11>;
-            bindings = <&skq RSHFT>;
-            layers = <0>;
-	};
-	
-	combo_lsft {
-	    timeout-ms = <30>;
-            key-positions = <6 16>;
-            bindings = <&skq RSHFT>;
-            layers = <0>;
-	};
-	
-	combo_lrpt {
-	    timeout-ms = <30>;
-            key-positions = <12 13>;
-            bindings = <&key_repeat>;
-            layers = <0>;
-	};
-	
-	combo_rrpt {
-	    timeout-ms = <30>;
-            key-positions = <14 15>;
-            bindings = <&key_repeat>;
             layers = <0>;
 	};
 	
@@ -260,6 +192,27 @@
             layers = <0>;
 	};
 	
+	combo_lt {
+	    timeout-ms = <30>;
+            key-positions = <1 11>;
+            bindings = <&kp LT>;
+            layers = <0>;
+	};
+	
+	combo_gt {
+	    timeout-ms = <30>;
+            key-positions = <6 16>;
+            bindings = <&kp GT>;
+            layers = <0>;
+	};
+	
+	combo_del {
+	    timeout-ms = <30>;
+            key-positions = <2 3>;
+            bindings = <&kp DEL>;
+            layers = <0>;
+	}
+	
     };
 
     keymap {
@@ -267,10 +220,10 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp W       &kp F        &kp P          &kp V            &parens      &kp M        &quomma      &dang
-            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp B            &undshash    &gqt RCTRL N &gqt RSHFT A &gqt RALT I &kp O  &bsland
-                     &kp X       &kp C       &gqt LGUI G  &kp D          &kp K            &slashterisk &kp L        &gqt RGUI U  &kp Y       &dquipe
-                                              &kp C_MUTE  &lt MSE ENTER  &lt NAV SPC      &lt SYM E &lt FUN SQT &none
+                                 &kp G       &kp D        &kp F          &kp B            &kp W      &kp L        &kp U           &kp O
+            &kp V    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT E    &gqt RALT A &kp I  &kp Y
+                     &kp X       &kp C       &gqt LGUI M  &kp P          &colons          &parens    &kp L        &danggqt RGUI 0 &kp SQT     &slipe
+                                              &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &skq LSHFT &mo SYM      &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
