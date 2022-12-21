@@ -152,6 +152,13 @@
             layers = <0>;
         };
 	
+	combo_j {
+            timeout-ms = <30>;
+            key-positions = <21 22>;
+            bindings = <&kp J>;
+            layers = <0>;
+        };
+	
 	combo_bsp {
             timeout-ms = <30>;
             key-positions = <0 1>;
