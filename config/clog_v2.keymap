@@ -96,6 +96,14 @@
             bindings = <&kp COLON>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+	
+	parens: LPAR_RPAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_RPAR";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
 	slipe: slash_pipe {
             compatible = "zmk,behavior-mod-morph";
