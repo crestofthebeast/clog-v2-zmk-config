@@ -211,7 +211,7 @@
             key-positions = <2 3>;
             bindings = <&kp DEL>;
             layers = <0>;
-	}
+	};
 	
     };
 
@@ -222,7 +222,7 @@
             bindings = <
                                  &kp G       &kp D        &kp F          &kp B            &kp W      &kp L        &kp U           &kp O
             &kp V    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT E    &gqt RALT A &kp I  &kp Y
-                     &kp X       &kp C       &gqt LGUI M  &kp P          &colons          &parens    &kp L        &danggqt RGUI 0 &kp SQT     &slipe
+                     &kp X       &kp C       &gqt LGUI M  &kp P          &colons          &parens    &quomma      &danggqt RGUI 0 &kp SQT     &slipe
                                               &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &skq LSHFT &mo SYM      &none
             >;
 
@@ -231,9 +231,9 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9 &none         &oxford_comma &kp CARET  &kp PLUS  &kp EQUAL
-            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &kp DOLLAR    &kp COLON  &kp SEMI  &kp PERCENT   &kp TILDE  &none
-                  &none     &kp N4 &kp N5 &kp N6 &none         &none         &kp LT     &kp GT    &kp AT        &none
+                            &kp N7 &kp N8 &kp N9 &kp TILDE     &oxford_comma &kp DOLLAR &kp PLUS  &kp GRAVE
+            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &undshash     &kp PERC   &kp STAR  &kp AT    &kp AMPS  &none
+                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &parens       &quomma    &dang     &kp SQT   &slipe
                                    &trans &kp N0 &trans        &trans        &trans     &trans
             >;
 
