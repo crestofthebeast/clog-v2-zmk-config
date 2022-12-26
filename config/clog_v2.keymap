@@ -137,15 +137,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-	quommagqt: quomma-global-quick-tap {
+	sqtlt: sqt_lt {
 	    compatible = "zmk,behavior-hold-tap";
-	    label = "QUOMMA_GLOBAL_QUICK_TAP";
+	    label = "LT_SQT";
 	    #binding-cells = <2>;
 	    flavor = "tap-preferred";
 	    tapping-term-ms = <200>;
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
-	    bindings = <&kp>, <&quomma>;
+	    bindings = <&squostar>, <&mo MSE>;
 	};
 	
     };
@@ -268,9 +268,9 @@
         MAIN_layer {
             bindings = <
                                  &kp W       &kp F        &kp P          &kp B            &colons    &kp L        &kp U             &kp Y
-            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A      &gqt RALT I &kp O  &slashes
+            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt CTRL N &gqt RSHFT A      &gqt RALT I &kp O  &slashes
                      &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quommagqt RGUI 0 &dang       &dquipe
-                                              &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &lt SYM E  &lt MSE SQT  &none
+                                              &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &lt SYM E  &sqtlt  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
