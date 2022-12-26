@@ -63,15 +63,7 @@
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
 	    bindings = <&kp>, <&kp>;
-	};
-	
-	quomma: comma_question {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_QUESTION";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp QMARK>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+	};	
 	
 	dang: dot_bang {
             compatible = "zmk,behavior-mod-morph";
@@ -267,9 +259,9 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp W       &kp F        &kp P          &kp B            &colons    &kp L        &kp U             &kp Y
-            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A      &gqt RALT I &kp O  &slashes
-                     &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quommagqt RGUI 0 &dang       &dquipe
+                                 &kp W       &kp F        &kp P          &kp B            &colons    &kp L        &kp U         &kp Y
+            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A  &gqt RALT I &kp O  &slashes
+                     &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quomma       &dang       &dquipe
                                               &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &lt SYM E  &sqtlt  &none
             >;
 
