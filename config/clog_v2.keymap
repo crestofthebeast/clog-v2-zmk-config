@@ -128,6 +128,15 @@
             bindings = <&kp SLASH>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+	
+	quomma: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_QUESTION";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
 
 	sqtlt: sqt_layer_tap {
 	    compatible = "zmk,behavior-hold-tap";
@@ -196,14 +205,7 @@
             layers = <0>;
 	};
 	
-	quomma: comma_question {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_QUESTION";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp QMARK>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
+
 	combo_mins {
 	    timeout-ms = <30>;
             key-positions = <27 28>;
@@ -280,7 +282,7 @@
             bindings = <
                             &kp N7 &kp N8 &kp N9 &kp TILDE     &colons       &kp LT     &kp GT  &kp EQUAL
             &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &undshash     &kp PRCNT  &kp AT  &kp PLUS  &kp AMPS  &none
-                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &parens       &kp DOLLAR    &quomma &dang     &slipe
+                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &parens       &kp DOLLAR &quomma &dang     &slipe
                                    &trans &kp N0 &trans        &trans        &trans     &trans
             >;
 
