@@ -129,9 +129,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-	sqtlt: sqt_lt {
+	sqtlt: sqt_layer_tap {
 	    compatible = "zmk,behavior-hold-tap";
-	    label = "LT_SQT";
+	    label = "SQT_LAYER_TAP";
 	    #binding-cells = <2>;
 	    flavor = "tap-preferred";
 	    tapping-term-ms = <200>;
