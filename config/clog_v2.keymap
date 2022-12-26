@@ -113,15 +113,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-	danggqt: dang-global-quick-tap {
+	quommagqt: quomma-global-quick-tap {
 	    compatible = "zmk,behavior-hold-tap";
-	    label = "DANG_GLOBAL_QUICK_TAP";
+	    label = "QUOMMA_GLOBAL_QUICK_TAP";
 	    #binding-cells = <2>;
 	    flavor = "tap-preferred";
 	    tapping-term-ms = <200>;
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
-	    bindings = <&kp>, <&dang>;
+	    bindings = <&kp>, <&quomma>;
 	};
 	
     };
@@ -215,17 +215,17 @@
             layers = <0>;
 	};
 	
-	combo_lt {
+	combo_lsft {
 	    timeout-ms = <30>;
             key-positions = <1 11>;
-            bindings = <&kp LT>;
+            bindings = <&kp LSHFT>;
             layers = <0>;
 	};
 	
-	combo_gt {
+	combo_rsft {
 	    timeout-ms = <30>;
             key-positions = <6 16>;
-            bindings = <&kp GT>;
+            bindings = <&kp RSHFT>;
             layers = <0>;
 	};
 	
@@ -243,10 +243,10 @@
 
         MAIN_layer {
             bindings = <
-                                 &kp G       &kp D        &kp F          &kp B            &kp W      &kp L        &kp U           &kp O
-            &kp V    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT E    &gqt RALT A &kp I  &kp Y
-                     &kp X       &kp C       &gqt LGUI M  &kp P          &colons          &parens    &quomma      &danggqt RGUI 0 &kp SQT     &slipe
-                                              &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &skq LSHFT &mo SYM      &none
+                                 &kp W       &kp F        &kp P          &kp B            &colons    &kp L        &kp U             &kp O
+            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A      &gqt RALT I &kp O  &kp Y
+                     &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quommagqt RGUI 0 &dang       &slipe
+                                              &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &lt SYM E  &lt SQT MSE      &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -254,9 +254,9 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9 &kp TILDE     &oxford_comma &kp DOLLAR &kp PLUS  &kp GRAVE
-            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &undshash     &kp PRCNT  &kp STAR  &kp AT    &kp AMPS  &none
-                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &parens       &quomma    &dang     &kp SQT   &slipe
+                            &kp N7 &kp N8 &kp N9 &kp TILDE     &colons       &kp LT     &kp GT  &kp EQUALS
+            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &undshash     &kp PRCNT  &kp AT  &kp PLUS  &kp AMPS  &none
+                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &parens       &DOLLAR    &quomma &dang     &slipe
                                    &trans &kp N0 &trans        &trans        &trans     &trans
             >;
 
