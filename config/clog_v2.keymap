@@ -89,6 +89,30 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
+	squostar: sqt_star {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SQT_STAR";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp STAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+	dquipe: dqt_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DQT_PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp PIPE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
+	slashes: slash_bslh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_BSLH";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
 	colons: colon_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "COLON_SEMI";
@@ -244,8 +268,8 @@
         MAIN_layer {
             bindings = <
                                  &kp W       &kp F        &kp P          &kp B            &colons    &kp L        &kp U             &kp O
-            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A      &gqt RALT I &kp O  &kp Y
-                     &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quommagqt RGUI 0 &dang       &slipe
+            &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A      &gqt RALT I &kp O  &slashes
+                     &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quommagqt RGUI 0 &dang       &dquipe
                                               &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &lt SYM E  &lt SQT MSE      &none
             >;
 
