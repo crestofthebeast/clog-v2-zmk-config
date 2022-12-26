@@ -196,6 +196,14 @@
             layers = <0>;
 	};
 	
+	quomma: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_QUESTION";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
 	combo_mins {
 	    timeout-ms = <30>;
             key-positions = <27 28>;
