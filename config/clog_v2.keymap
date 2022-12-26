@@ -289,10 +289,10 @@
        
         NAV_layer {
             bindings = <
-                              &kp CAPS  &kp TAB      &kp LS(LC(F22))  &none               &none   &kp DEL   &kp PG_DN  &kp PG_UP
-           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL        &kp LS(LC(F23))     &none   &kp LEFT  &kp DOWN   &kp RIGHT &kp INS &none
-                   &none      &none     &sk LGUI     &none            &none               &none   &kp BSPC  &kp UP     &kp HOME  &kp END
-                                        &trans       &none            &none               &trans  &none      &trans
+                              &kp CAPS  &kp TAB      &kp LS(LC(F22))  &bt BT_SEL 0    &none   &kp DEL   &kp PG_DN  &kp PG_UP
+           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL        &bt BT_SEL 1    &none   &kp LEFT  &kp DOWN   &kp RIGHT &kp INS &none
+                   &none      &none     &sk LGUI     &none            &bt BT_SEL 2    &none   &kp BSPC  &kp UP     &kp HOME  &kp END
+                                        &trans       &none            &none            &trans  &none      &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -311,9 +311,9 @@
 
         FUN_layer {
             bindings = <
-                                  &kp F7 &kp F8 &kp F9 &kp F10       &kp F22 &kp F13 &kp F14 &kp F15
-            &bootloader &reset    &kp F1 &kp F2 &kp F3 &kp F11       &kp F23 &kp F16 &kp F17 &kp F18  &reset  &bootloader
-                        &reset    &kp F4 &kp F5 &kp F6 &kp F12       &kp F24 &kp F19 &kp F20 &kp F21  &reset
+                                   &kp F7 &kp F8 &kp F9 &kp F10       &kp F22 &kp F13 &kp F14 &kp F15
+            &bootloader &reset     &kp F1 &kp F2 &kp F3 &kp F11       &kp F23 &kp F16 &kp F17 &kp F18  &reset  &bootloader
+                        &bt BT_CLR &kp F4 &kp F5 &kp F6 &kp F12       &kp F24 &kp F19 &kp F20 &kp F21  &reset
                                          &trans &trans &trans        &trans &trans &trans
             >;
 
