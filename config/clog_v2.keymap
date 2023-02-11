@@ -263,7 +263,7 @@
                                  &kp W       &kp F        &kp P          &kp B            &colons    &kp L        &kp U         &kp Y
             &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A  &gqt RALT I &kp O  &slashes
                      &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quomma       &dang       &dquipe
-                                              &kp C_MUTE  &stqlt MSE 0   &lt NAV SPC      &lt SYM E  &lt ENTER MSE 0  &none
+                                              &kp C_MUTE  &sqtlt MSE 0   &lt NAV SPC      &lt SYM E  &lt ENTER MSE 0  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -282,9 +282,9 @@
        
         NAV_layer {
             bindings = <
-                              &kp CAPS  &kp TAB      &kp LS(LC(F22))  &bt BT_SEL 0    &none   &kp DEL   &kp PG_DN  &kp PG_UP
-           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL        &bt BT_SEL 1    &none   &kp LEFT  &kp DOWN   &kp RIGHT &kp INS &none
-                   &none      &none     &sk LGUI     &none            &bt BT_SEL 2    &none   &kp BSPC  &kp UP     &kp HOME  &kp END
+                              &kp CAPS  &kp TAB      &kp LS(LC(F22))  &bt BT_SEL 0    &none   &kp DEL   &kp UP    &kp HOME
+           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL        &bt BT_SEL 1    &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp INS &none
+                   &none      &none     &sk LGUI     &none            &bt BT_SEL 2    &none   &kp BSPC  &kp PG_DN &kp PG_UP  &kp END
                                         &trans       &none            &none            &trans  &none      &trans
             >;
 
