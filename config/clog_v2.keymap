@@ -294,7 +294,7 @@
                             &kp W       &kp F        &kp P          &kp B            &colons    &kp L          &kp U         &kp Y
             &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N   &gqt RSHFT A  &gqt RALT I &kp O  &slashes
                      &kp X  &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M          &quomma       &dang       &dquipe
-                                        &kp C_MUTE   &sqtlt MSE 0   &lt NAV SPC      &lt SYM E  &lt ENTER MSE  &none
+                                        &kp C_MUTE   &sqtlt MSE 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
