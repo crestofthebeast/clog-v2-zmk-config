@@ -234,14 +234,14 @@
 	
 	combo_lsft {
 	    timeout-ms = <30>;
-            key-positions = <1 11>;
+            key-positions = <10 11>;
             bindings = <&kp LSHFT>;
             layers = <0>;
 	};
 	
 	combo_rsft {
 	    timeout-ms = <30>;
-            key-positions = <6 16>;
+            key-positions = <16 17>;
             bindings = <&kp RSHFT>;
             layers = <0>;
 	};
@@ -263,7 +263,7 @@
                                  &kp W       &kp F        &kp P          &kp B            &colons    &kp L        &kp U         &kp Y
             &kp J    &kp R       &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N &gqt RSHFT A  &gqt RALT I &kp O  &slashes
                      &kp X       &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M        &quomma       &dang       &dquipe
-                                              &kp C_MUTE  &lt FUN ENTER  &lt NAV SPC      &lt SYM E  &sqtlt MSE 0  &none
+                                              &kp C_MUTE  &stqlt MSE 0   &lt NAV SPC      &lt SYM E  &lt ENTER MSE 0  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -271,9 +271,9 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9 &kp TILDE     &colons   &kp RBRC  &kp RBKT  &kp AT
-            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &kp PLUS  &kp LBRC  &kp LBKT  &kp PRCNT &kp AMPS  &none
-                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &parens   &kp LT    &kp GT    &dang     &dquipe
+                            &kp N7 &kp N8 &kp N9 &kp TILDE     &trans   &kp RBRC  &kp RBKT  &kp AT
+            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &kp PLUS &kp LBRC  &kp LBKT  &kp PRCNT &kp AMPS  &none
+                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &trans   &kp LT    &kp GT    &trans     &trans
                                    &trans &kp N0 &trans        &trans    &trans     &trans
             >;
 
