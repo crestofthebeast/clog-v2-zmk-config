@@ -252,14 +252,14 @@
 	combo_lsft {
 	    timeout-ms = <30>;
             key-positions = <10 11>;
-            bindings = <SK(LSHFT)>;
+            bindings = <&nk LSHFT LSHFT)>;
             layers = <0>;
 	};
 	
 	combo_rsft {
 	    timeout-ms = <30>;
             key-positions = <16 17>;
-            bindings = <sk(RSHFT)>;
+            bindings = <&nk RSHFT RSHFT>;
             layers = <0>;
 	};
 	
