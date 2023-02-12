@@ -11,6 +11,8 @@
 #define FUN 4
 
 #define SK(KEY) &nk KEY KEY
+#define HYP(KEY) LG(LA(LS(LC(key))))
+#define MEH(KEY) LA(LS(LC(key)))
 
 &sk {
   release-after-ms = <60000>;
