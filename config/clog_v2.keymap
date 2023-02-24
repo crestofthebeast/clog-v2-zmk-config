@@ -201,7 +201,7 @@
 	combo_equals {
             timeout-ms = <30>;
             key-positions = <21 22>;
-            bindings = <&kp EQAUL>;
+            bindings = <&kp EQUAL>;
             layers = <0>;
         };
 	
