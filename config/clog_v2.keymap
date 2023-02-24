@@ -159,6 +159,17 @@
 	    bindings = <&mo>, <&squostar>;
 	};
 	
+	quommagqt: quomma-global-quick-tap {
+	    compatible = "zmk,behavior-hold-tap";
+	    label = "QUOMMA_GLOBAL_QUICK_TAP";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <200>;
+	    quick-tap-ms = <125>;
+	    global-quick-tap;
+	    bindings = <&kp>, <&quomma>;
+	};
+	
     };
 
 /*                KEY POSITIONS
@@ -187,10 +198,10 @@
             layers = <0>;
         };
 	
-	combo_j {
+	combo_equals {
             timeout-ms = <30>;
             key-positions = <21 22>;
-            bindings = <&kp J>;
+            bindings = <&kp EQAUL>;
             layers = <0>;
         };
 	
@@ -215,7 +226,6 @@
             layers = <0>;
 	};
 	
-
 	combo_mins {
 	    timeout-ms = <30>;
             key-positions = <27 28>;
@@ -254,14 +264,14 @@
 	combo_lsft {
 	    timeout-ms = <20>;
             key-positions = <10 11>;
-            bindings = <SK(LSHFT)>;
+            bindings = <&skq LSHFT>;
             layers = <0>;
 	};
 	
 	combo_rsft {
 	    timeout-ms = <20>;
             key-positions = <16 17>;
-            bindings = <SK(RSHFT)>;
+            bindings = <&skq RSHFT>;
             layers = <0>;
 	};
 	
@@ -293,9 +303,9 @@
 
         MAIN_layer {
             bindings = <
-                            &kp W       &kp F        &kp P          &kp B            &colons    &kp L          &kp U         &kp Y
-            &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N   &gqt RSHFT A  &gqt RALT I &kp O  &slashes
-                     &kp X  &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M          &quomma       &dang       &dquipe
+                            &kp W       &kp F        &kp P          &kp B            &colons    &kp L          &kp U              &kp Y
+            &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N   &gqt RSHFT A       &gqt RALT I &kp O  &slashes
+                     &kp X  &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M          &quommagqt RGUI 0  &dang       &dquipe
                                         &kp C_MUTE   &sqtlt MSE 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
             >;
 
