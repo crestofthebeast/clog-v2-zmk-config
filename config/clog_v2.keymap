@@ -360,8 +360,8 @@
 	MAC_layer {
             bindings = <
                             &kp W       &kp F        &kp P          &kp B            &colons    &kp L          &kp U              &kp Y
-            &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N   &gqt RSHFT A       &gqt RALT I &kp O  &slashes
-                     &kp X  &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M          &quommagqt RGUI 0  &dang       &dquipe
+            &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LGUI H   &kp K            &undshash  &gqt RGUI N   &gqt RSHFT A       &gqt RALT I &kp O  &slashes
+                     &kp X  &kp C       &gqt LCTRL G  &kp D          &kp V            &parens    &kp M          &quommagqt RCTRL 0  &dang       &dquipe
                                         &kp C_MUTE   &sqtlt FUN 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
             >;
 
