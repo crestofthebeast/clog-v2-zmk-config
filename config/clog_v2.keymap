@@ -9,7 +9,6 @@
 #define NAV 2
 #define MSE 3
 #define FUN 4
-#define MAC 5
 
 #define SK(KEY) &nk KEY KEY
 #define HYP(KEY) LG(LA(LS(LC(key))))
@@ -357,15 +356,5 @@
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 	
-	MAC_layer {
-            bindings = <
-                            &kp W       &kp F         &kp P          &kp B            &colons    &kp L          &kp U              &kp Y
-            &kp J    &kp R  &gqt LALT S &gqt LSHFT T  &gqt LGUI H    &kp K            &undshash  &gqt RCTRL N   &gqt RGUI      &gqt RALT I &kp O  &slashes
-                     &kp X  &kp C       &gqt LCTRL G  &kp D          &kp V            &parens    &kp M          &quommagqt RCTRL 0 &dang       &dquipe
-                                        &kp C_MUTE   &sqtlt MSE 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
-            >;
-
-			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-        };
     };
 };
