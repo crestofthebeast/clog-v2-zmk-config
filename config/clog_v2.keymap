@@ -9,6 +9,7 @@
 #define NAV 2
 #define MSE 3
 #define FUN 4
+#define MAC 5
 
 #define SK(KEY) &nk KEY KEY
 #define HYP(KEY) LG(LA(LS(LC(key))))
@@ -306,7 +307,7 @@
                             &kp W       &kp F        &kp P          &kp B            &colons    &kp L          &kp U              &kp Y
             &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N   &gqt RSHFT A       &gqt RALT I &kp O  &slashes
                      &kp X  &kp C       &gqt LGUI G  &kp D          &kp V            &parens    &kp M          &quommagqt RGUI 0  &dang       &dquipe
-                                        &kp C_MUTE   &sqtlt MSE 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
+                                        &kp C_MUTE   &sqtlt FUN 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -327,7 +328,7 @@
             bindings = <
                               &kp CAPS  &kp TAB      &kp LS(LC(F22))  &bt BT_SEL 0    &none   &kp DEL   &kp UP    &kp HOME
            &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL        &bt BT_SEL 1    &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp INS &none
-                   &none      &none     &sk LGUI     &none            &bt BT_SEL 2    &none   &kp BSPC  &kp PG_DN &kp PG_UP  &kp END
+                   &none      &none     &sk LGUI     &tog MAC         &bt BT_SEL 2    &none   &kp BSPC  &kp PG_DN &kp PG_UP  &kp END
                                         &trans       &none            &none            &trans  &none      &trans
             >;
 
@@ -351,6 +352,17 @@
             &bootloader &reset     &kp F1 &kp F2 &kp F3 &kp F11       &kp F23 &kp F16 &kp F17 &kp F18  &reset  &bootloader
                         &bt BT_CLR &kp F4 &kp F5 &kp F6 &kp F12       &kp F24 &kp F19 &kp F20 &kp F21  &reset
                                          &trans &trans &trans        &trans &trans &trans
+            >;
+
+			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+        };
+	
+	MAC_layer {
+            bindings = <
+                            &kp W       &kp F         &kp P          &kp B            &colons    &kp L          &kp U              &kp Y
+            &kp J    &kp R  &gqt LALT S &gqt LSHFT T  &gqt LGUI H    &kp K            &undshash  &gqt RCTRL N   &gqt RGUI      &gqt RALT I &kp O  &slashes
+                     &kp X  &kp C       &gqt LCTRL G  &kp D          &kp V            &parens    &kp M          &quommagqt RCTRL 0 &dang       &dquipe
+                                        &kp C_MUTE   &sqtlt MSE 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
