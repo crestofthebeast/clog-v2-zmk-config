@@ -5,11 +5,12 @@
 #include "../zmk-nodefree-config/helper.h"
 
 #define MAIN 0
-#define SYM 1
-#define NAV 2
-#define MSE 3
-#define FUN 4
-#define MAC 5
+#define MAC 1
+#define SYM 2
+#define NAV 3
+#define MSE 4
+#define FUN 5
+
 
 #define SK(KEY) &nk KEY KEY
 #define HYP(KEY) LG(LA(LS(LC(key))))
@@ -312,6 +313,17 @@
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
+	
+	MAC_layer {
+            bindings = <
+                            &kp W       &kp F        &kp P          &kp B            &colons    &kp L          &kp U              &kp Y
+            &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LGUI H   &kp K            &undshash  &gqt RGUI N   &gqt RSHFT A       &gqt RALT I &kp O  &slashes
+                     &kp X  &kp C       &gqt LCTRL G  &kp D          &kp V            &parens    &kp M          &quommagqt RCTRL 0  &dang       &dquipe
+                                        &kp C_MUTE   &sqtlt FUN 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
+            >;
+
+			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+        };
 
         SYM_layer {
             bindings = <
@@ -352,17 +364,6 @@
             &bootloader &reset     &kp F1 &kp F2 &kp F3 &kp F11       &kp F23 &kp F16 &kp F17 &kp F18  &reset  &bootloader
                         &bt BT_CLR &kp F4 &kp F5 &kp F6 &kp F12       &kp F24 &kp F19 &kp F20 &kp F21  &reset
                                          &trans &trans &trans        &trans &trans &trans
-            >;
-
-			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-        };
-	
-	MAC_layer {
-            bindings = <
-                            &kp W       &kp F        &kp P          &kp B            &colons    &kp L          &kp U              &kp Y
-            &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LGUI H   &kp K            &undshash  &gqt RGUI N   &gqt RSHFT A       &gqt RALT I &kp O  &slashes
-                     &kp X  &kp C       &gqt LCTRL G  &kp D          &kp V            &parens    &kp M          &quommagqt RCTRL 0  &dang       &dquipe
-                                        &kp C_MUTE   &sqtlt FUN 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
