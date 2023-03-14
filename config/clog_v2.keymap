@@ -15,6 +15,7 @@
 #define SK(KEY) &nk KEY KEY
 #define HYP(KEY) LG(LA(LS(LC(key))))
 #define MEH(KEY) LA(LS(LC(key)))
+#define HYPR LG(LC(LS(LALT)))
 
 &sk {
   release-after-ms = <60000>;
