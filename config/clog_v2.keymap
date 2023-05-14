@@ -5,11 +5,6 @@
 #include "../zmk-nodefree-config/helper.h"
 
 #define MAIN 0
-#define MAC 1
-#define SYM 2
-#define NAV 3
-#define MSE 4
-#define FUN 5
 
 
 #define SK(KEY) &nk KEY KEY
