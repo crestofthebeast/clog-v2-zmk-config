@@ -295,7 +295,7 @@
                    &gqt HYPR W &kp F        &kp P          &kp B            &colons    &kp L          &kp U              &gqt HYPR Y
             &kp R  &gqt LALT S &gqt LSHFT T &gqt LCTRL H   &kp K            &undshash  &gqt RCTRL N   &gqt RSHFT A       &gqt RALT I &kp O
             &kp X  &kp C       &gqt LGUI G  &gqt HYPR D                                &gqt HYPR M    &quommagqt RGUI 0  &dang       &dquipe
-                               &kp C_MUTE   &sqtlt FUN 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &kp 1 &kp 2 &kp 3 &kp 4 &kp 5
+                               &kp C_MUTE   &kp A          &kp B            &kp C      &kp D          &kp E
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
