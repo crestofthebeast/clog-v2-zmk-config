@@ -8,8 +8,6 @@
 #define MAC 1
 #define SYM 2
 #define NAV 3
-#define MSE 4
-#define FUN 5
 
 
 #define SK(KEY) &nk KEY KEY
@@ -66,7 +64,6 @@
             bindings = <&kp>, <&sk>;
     };
 
-
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
@@ -103,27 +100,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	squostar: sqt_star {
+	squilde: sqt_tilde {
             compatible = "zmk,behavior-mod-morph";
-            label = "SQT_STAR";
+            label = "SQT_TILDE";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp STAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-	dquipe: dqt_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DQT_PIPE";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp PIPE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
-	slashes: slash_bslh {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_BSLH";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp BSLH>;
+            bindings = <&kp SQT>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
@@ -159,7 +140,7 @@
 	    tapping-term-ms = <200>;
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
-	    bindings = <&mo>, <&squostar>;
+	    bindings = <&mo>, <&squilde>;
 	};
 	
 	quommagqt: quomma-global-quick-tap {
@@ -197,98 +178,6 @@
             timeout-ms = <30>;
             key-positions = <22 23>;
             bindings = <&kp Z>;
-
-        };
-	
-	combo_equals {
-            timeout-ms = <30>;
-            key-positions = <21 22>;
-            bindings = <&kp EQUAL>;
-
-        };
-	
-	combo_bsp {
-            timeout-ms = <30>;
-            key-positions = <0 1>;
-            bindings = <&kp BSPC>;
-
-        };
-	
-	combo_esc {
-            timeout-ms = <30>;
-            key-positions = <1 12>;
-            bindings = <&kp ESCAPE>;
-
-        };
-	
-	combo_capsword {
-	    timeout-ms = <30>;
-            key-positions = <6 15>;
-            bindings = <&caps_word>;
-
-	};
-	
-	combo_mins {
-	    timeout-ms = <30>;
-            key-positions = <27 28>;
-            bindings = <&kp MINUS>;
-
-	};
-	
-	combo_ocrl {
-	    timeout-ms = <30>;
-            key-positions = <2 12>;
-            bindings = <&kp LBRC>;
-
-	};
-	
-	combo_ccrl {
-	    timeout-ms = <30>;
-            key-positions = <5 15>;
-            bindings = <&kp RBRC>;
-	};
-	
-	combo_lbkt {
-	    timeout-ms = <30>;
-            key-positions = <0 10>;
-            bindings = <&kp LBKT>;
-	};
-	
-	combo_rbkt {
-	    timeout-ms = <30>;
-            key-positions = <7 17>;
-            bindings = <&kp RBKT>;
-	};
-	
-	combo_lsft {
-	    timeout-ms = <20>;
-            key-positions = <10 11>;
-            bindings = <&skq LSHFT>;
-	};
-	
-	combo_rsft {
-	    timeout-ms = <20>;
-            key-positions = <16 17>;
-            bindings = <&skq RSHFT>;
-	};
-	
-	combo_del {
-	    timeout-ms = <30>;
-            key-positions = <2 3>;
-            bindings = <&kp DEL>;
-	};
-	
-	combo_eql {
-	    timeout-ms = <30>;
-            key-positions = <21 22>;
-            bindings = <&kp EQUAL>;
-	};
-	
-	combo_grv {
-	    timeout-ms = <30>;
-            key-positions = <26 27>;
-            bindings = <&kp GRAVE>;
-	};
 	
     };
 
@@ -308,10 +197,10 @@
 	
 	MAC_layer {
             bindings = <
-                            &gqt HYPR W &kp F        &kp P          &kp B            &colons    &kp L          &kp U              &gqt HYPR Y
-            &kp J    &kp R  &gqt LALT S &gqt LSHFT T &gqt LGUI H   &kp K            &undshash  &gqt RGUI N   &gqt RSHFT A       &gqt RALT I &kp O  &slashes
-                     &kp X  &kp C       &gqt LCTRL G  &gqt HYPR D    &kp V            &parens    &gqt HYPR M  &quommagqt RCTRL 0  &dang       &dquipe
-                                        &kp C_MUTE   &sqtlt FUN 0   &lt NAV SPC      &lt SYM E  &lt MSE ENTER  &none
+                         &trans &trans &trans &trans  &trans &trans &trans &trans
+            &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+                  &trans &trans &trans &trans &none   &none  &trans &trans &trans &trans
+                                &trans &trans &trans  &trans &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -319,10 +208,10 @@
 
         SYM_layer {
             bindings = <
-                            &kp N7 &kp N8 &kp N9 &kp TILDE     &trans   &kp RBRC  &kp RBKT  &kp AT
-            &none &kp N0    &kp N3 &kp N2 &kp N1 &kp N0        &kp PLUS &kp LBRC  &kp LBKT  &kp PRCNT &kp AMPS  &none
-                  &none     &kp N4 &kp N5 &kp N6 &kp CARET     &kp DLLR &kp LT    &kp GT    &trans     &trans
-                                   &trans &kp N0 &trans        &trans    &trans     &trans
+                         &trans &trans &trans &trans  &trans &trans &trans &trans
+            &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+                  &trans &trans &trans &trans &none   &none  &trans &trans &trans &trans
+                                &trans &trans &trans  &trans &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -330,37 +219,13 @@
        
         NAV_layer {
             bindings = <
-                              &kp CAPS  &kp TAB      &kp LS(LC(F22))  &bt BT_SEL 0    &none   &kp DEL   &kp UP    &kp HOME
-           &none   &kp PSCRN  &sk LALT  &sk LSHFT    &sk LCTRL        &bt BT_SEL 1    &none   &kp LEFT  &kp DOWN  &kp RIGHT &kp INS &none
-                   &none      &none     &sk LGUI     &to MAC          &bt BT_SEL 2    &none   &kp BSPC  &kp PG_DN &kp PG_UP  &kp END
-                                        &trans       &none            &none            &trans  &none      &trans
+                         &trans &trans &trans &trans  &trans &trans &trans &trans
+            &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+                  &trans &trans &trans &trans &none   &none  &trans &trans &trans &trans
+                                &trans &trans &trans  &trans &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-        };
-	
-	MSE_layer {
-            bindings = <
-                         &none   &bt BT_CLR &none   &none   &none                           &bt BT_NXT   &bt BT_PRV  &bt BT_CLR
-            &bootloader  &none   &none      &none   &none   &none                           &none   &none   &none  &none   &none   &bootloader
-                         &sys_reset  &none      &none   &none   &none                           &none   &none   &none  &none   &sys_reset
-                                            &trans  &none   &trans                          &trans  &none  &trans
-            >;
-
-			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-        };
-
-        FUN_layer {
-            bindings = <
-                                   &kp F7 &kp F8 &kp F9 &kp F10       &kp F22 &kp F13 &kp F14 &kp F15
-            &bootloader &sys_reset     &kp F1 &kp F2 &kp F3 &kp F11       &kp F23 &kp F16 &kp F17 &kp F18  &sys_reset  &bootloader
-                        &bt BT_CLR &kp F4 &kp F5 &kp F6 &kp F12       &kp F24 &kp F19 &kp F20 &kp F21  &sys_reset
-                                         &trans &trans &trans        &trans &trans &trans
-            >;
-
-			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-        };
-	
 	/*
 	MAIN_layer {
             bindings = <
