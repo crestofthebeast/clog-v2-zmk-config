@@ -178,6 +178,7 @@
             timeout-ms = <30>;
             key-positions = <22 23>;
             bindings = <&kp Z>;
+	};
 	
     };
 
@@ -226,6 +227,7 @@
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+	};
 	/*
 	MAIN_layer {
             bindings = <
@@ -236,8 +238,5 @@
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-        };
-*/
-	
-    };
+        }; */
 };
