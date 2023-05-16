@@ -92,14 +92,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	undshash: underscore_hash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UNDERSCORE_HASH";
-            #binding-cells = <0>;
-            bindings = <&kp UNDERSCORE>, <&kp HASH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-	
 	squilde: sqt_tilde {
             compatible = "zmk,behavior-mod-morph";
             label = "SQT_TILDE";
@@ -168,15 +160,69 @@
     combos {
         compatible = "zmk,combos";
 	
-        combo_q {
-            timeout-ms = <30>;
+	combo_caret {
+            timeout-ms = <20>;
+            key-positions = <14 15>;
+            bindings = <&kp CARET>;
+        };
+	
+	combo_grave {
+            timeout-ms = <20>;
+            key-positions = <4 5>;
+            bindings = <&kp GRAVE>;
+        };
+	
+	combo_perc {
+            timeout-ms = <20>;
+            key-positions = <5 6>;
+            bindings = <&kp PERCENT>;
+        };
+	
+	combo_minus {
+            timeout-ms = <20>;
+            key-positions = <6 7>;
+            bindings = <&kp MINUS>;
+        };
+	
+	combo_at {
+            timeout-ms = <20>;
+            key-positions = <27 28>;
+            bindings = <&kp AT>;
+        };
+	
+	combo_hash {
+            timeout-ms = <20>;
+            key-positions = <26 27>;
+            bindings = <&kp HASH>;
+        };
+	
+	combo_eql {
+            timeout-ms = <20>;
+            key-positions = <0 1>;
+            bindings = <&kp EQUAL>;
+        };
+	
+        combo_j {
+            timeout-ms = <20>;
+            key-positions = <21 22>;
+            bindings = <&kp J>;
+        };
+	
+	combo_q {
+            timeout-ms = <20>;
             key-positions = <1 2>;
             bindings = <&kp Q>;
         };
+	
+	combo_x {
+            timeout-ms = <20>;
+            key-positions = <22 23>;
+            bindings = <&kp X>;
+        };
 
 	combo_z {
-            timeout-ms = <30>;
-            key-positions = <22 23>;
+            timeout-ms = <20>;
+            key-positions = <2 3>;
             bindings = <&kp Z>;
 	};
 	
