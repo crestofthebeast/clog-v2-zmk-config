@@ -160,6 +160,42 @@
     combos {
         compatible = "zmk,combos";
 	
+	combo_lbrc {
+	    timeout-ms = <20>;
+            key-positions = <2 12>;
+            bindings = <&kp LBRC>;
+	};
+	
+	combo_rbrc {
+	    timeout-ms = <20>;
+            key-positions = <5 15>;
+            bindings = <&kp RBRC>;
+	};
+	
+	combo_lt {
+	    timeout-ms = <20>;
+            key-positions = <1 11>;
+            bindings = <&kp LT>;
+	};
+	
+	combo_gt {
+	    timeout-ms = <20>;
+            key-positions = <6 16>;
+            bindings = <&kp RT>;
+	};
+	
+	combo_lbkt {
+	    timeout-ms = <20>;
+            key-positions = <0 10>;
+            bindings = <&kp LBKT>;
+	};
+	
+	combo_rbkt {
+	    timeout-ms = <20>;
+            key-positions = <7 17>;
+            bindings = <&kp RBKT>;
+	};
+	
 	combo_tab {
 	    timeout-ms = <20>;
             key-positions = <11 12>;
@@ -170,12 +206,6 @@
 	    timeout-ms = <20>;
             key-positions = <16 17>;
             bindings = <&kp BSPC>;
-	};
-	
-	combo_rsft {
-	    timeout-ms = <20>;
-            key-positions = <16 17>;
-            bindings = <&skq RSHFT>;
 	};
 	
 	combo_caret {
