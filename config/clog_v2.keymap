@@ -135,6 +135,14 @@
 	    bindings = <&mo>, <&squilde>;
 	};
 	
+	dqand: dqt_and {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DQT_AND";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
 	quommagqt: quomma-global-quick-tap {
 	    compatible = "zmk,behavior-hold-tap";
 	    label = "QUOMMA_GLOBAL_QUICK_TAP";
@@ -292,10 +300,10 @@
 
         MAIN_layer {
             bindings = <
-                         &kp W &kp F &kp P &kp B              &kp J &kp L &kp U     &kp Y
-            &none  &kp R &kp S &kp T &kp H &kp K              &kp X &kp N &kp A     &kp I   &kp O   &none
-                   &kp V &kp C &kp G &kp D &none              &none &kp M &kp COMMA &kp DOT &kp DQT
-                   &kp C_MUTE &sqtlt NAV 0 &lt NAV SPC  &lt SYM E &lt NAV ENTER  &none
+                         &gqt HYPR W  &kp F         &kp P         &kp B            &colons   &kp L          &kp U              &gqt HYPR Y
+            &none  &kp R &gqt LALT S  &gqt LSHFT T  &gqt LGUI H   &kp K            &parens   &gqt RGUI N    &gqt RSHFT A       &gqt RALT I  &kp O   &none
+                   &kp V &kp C        &gqt LGUI G   &kp D         &none            &none     &kp M          &quommagqt RGUI 0  &dang        &dqand
+                                      &kp C_MUTE    &sqtlt NAV 0  &lt NAV SPC      &lt SYM E &lt NAV ENTER  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -316,7 +324,7 @@
             bindings = <
                          &trans &trans &trans &trans  &trans &trans &trans &trans
             &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
-                  &trans &trans &trans &trans &none   &none  &trans &trans &trans &trans
+                  &bootloader &trans &trans &trans &none   &none  &trans &trans &trans &trans
                                 &trans &trans &trans  &trans &trans &trans
             >;
 
@@ -325,10 +333,10 @@
        
         NAV_layer {
             bindings = <
-                         &trans &trans &trans &trans  &trans &trans &trans &trans
-            &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
-                  &trans &trans &trans &trans &none   &none  &trans &trans &trans &trans
-                                &trans &trans &trans  &trans &trans &trans
+                          &trans &trans &trans &trans  &trans &trans &trans &trans
+            &none &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+                  &to MAC &trans &trans &trans &none   &none  &trans &trans &trans &trans
+                                 &trans &trans &trans  &trans &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
