@@ -239,4 +239,5 @@
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         }; */
+    }
 };
