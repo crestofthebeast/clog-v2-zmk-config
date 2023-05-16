@@ -181,7 +181,7 @@
 	combo_gt {
 	    timeout-ms = <20>;
             key-positions = <6 16>;
-            bindings = <&kp RT>;
+            bindings = <&kp GT>;
 	};
 	
 	combo_lbkt {
