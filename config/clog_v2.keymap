@@ -302,7 +302,7 @@
             bindings = <
                          &gqt HYPR W  &kp F         &kp P         &kp B            &colons   &kp L          &kp U              &gqt HYPR Y
             &none  &kp R &gqt LALT S  &gqt LSHFT T  &gqt LGUI H   &kp K            &parens   &gqt RGUI N    &gqt RSHFT A       &gqt RALT I  &kp O   &none
-                   &kp V &kp C        &gqt LGUI G   &kp D         &none            &none     &kp M          &quommagqt RGUI 0  &dang        &dqand
+                   &kp V &kp C        &gqt LCTL G   &kp D         &none            &none     &kp M          &quommagqt RCTL 0  &dang        &dqand
                                       &kp C_MUTE    &sqtlt NAV 0  &lt NAV SPC      &lt SYM E &lt NAV ENTER  &none
             >;
 
