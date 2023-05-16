@@ -160,6 +160,24 @@
     combos {
         compatible = "zmk,combos";
 	
+	combo_tab {
+	    timeout-ms = <20>;
+            key-positions = <11 12>;
+            bindings = <&kp TAB>;
+	};
+	
+	combo_bspc {
+	    timeout-ms = <20>;
+            key-positions = <16 17>;
+            bindings = <&kp BSPC>;
+	};
+	
+	combo_rsft {
+	    timeout-ms = <20>;
+            key-positions = <16 17>;
+            bindings = <&skq RSHFT>;
+	};
+	
 	combo_caret {
             timeout-ms = <20>;
             key-positions = <14 15>;
@@ -226,6 +244,17 @@
             bindings = <&kp Z>;
 	};
 	
+	combo_lsft {
+	    timeout-ms = <20>;
+            key-positions = <10 11>;
+            bindings = <&skq LSHFT>;
+	};
+	
+	combo_rsft {
+	    timeout-ms = <20>;
+            key-positions = <16 17>;
+            bindings = <&skq RSHFT>;
+	};
     };
 
     keymap {
