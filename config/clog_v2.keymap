@@ -256,6 +256,18 @@
     combos {
         compatible = "zmk,combos";
 	
+	combo_esc {
+	    timeout-ms = <20>;
+            key-positions = <1 12>;
+            bindings = <&kp ESCAPE>;
+	};
+	
+	combo_capsword {
+	    timeout-ms = <20>;
+            key-positions = <15 6>;
+            bindings = <&caps_word>;
+	};
+	
 	combo_slsh {
 	    timeout-ms = <20>;
             key-positions = <15 17>;
