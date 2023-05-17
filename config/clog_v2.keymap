@@ -49,6 +49,17 @@
 		, <&macro_tap &kp X &kp F &kp O &kp R &kp D &kp SPC &kp C &kp O &kp M &kp M &kp A &kp DOT>
 		;
 	    };
+	    
+	md_code: md_code {
+	    label = "ZM_md_code";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>
+		;
+	    };
 	};
 
     behaviors {
@@ -317,7 +328,7 @@
 	
 	MAC_layer {
             bindings = <
-                         &trans   &trans   &trans &kp BSLH   &trans    &trans &trans   &trans
+                         &trans   &trans   &trans &kp BSLH   &md_code  &trans &trans   &trans
             &none &kp N6 &kp N4   &kp N0   &kp N2 &kp PIPE   &kp UNDER &kp N3 &kp N1   &kp N5 &kp N7 &none
                   &trans &kp PLUS &kp DLLR &kp N8 &none      &none     &kp N9 &kp STAR &trans &trans
                                   &trans   &trans &trans     &trans    &trans &trans
