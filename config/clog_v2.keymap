@@ -71,6 +71,7 @@
 	        = <&macro_tap &kp EQUAL &kp GT>
 		;
 	    };
+	    
 	 bigarr_lft: bigarr_lft {
 	    label = "ZM_bigarr_lft";
 	    compatible = "zmk,behavior-macro";
@@ -79,6 +80,61 @@
 	    tap-ms = <3>;
 	    bindings
 	        = <&macro_tap &kp LT &kp EQUAL>
+		;
+	    };
+	 
+	 wikilink: wikilink {
+	    label = "ZM_wikilink";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp LBKT &kp LBKT>
+		;
+	    };
+	 
+	 gt_equal: gt_equal {
+	    label = "ZM_gt_equal";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp GT &kp EQUAL>
+		;
+	    };
+	 
+	 notequal: notequal {
+	    label = "ZM_notequal";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp EXCL &kp EQUAL>
+		;
+	    };
+	 
+	 and_and: and_and {
+	    label = "ZM_and_and";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp AMPS &kp AMPS>
+		;
+	    };
+	 
+	 emdash: emdash {
+	    label = "ZM_emdash";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp MINUS &kp MINUS>
 		;
 	    };
 	};
