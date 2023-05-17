@@ -235,7 +235,7 @@
 	
 	combo_caret {
             timeout-ms = <35>;
-            key-positions = <14 15>;
+            key-positions = <14 26>;
             bindings = <&kp CARET>;
         };
 	
@@ -328,6 +328,17 @@
 	
 	MAC_layer {
             bindings = <
+                          &trans &trans &trans &trans  &trans &trans &trans &trans
+            &none &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+                  &to MAC &trans &trans &trans &none   &none  &trans &trans &trans &trans
+                                 &trans &trans &trans  &trans &trans &trans
+            >;
+
+			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+        };
+
+        SYM_layer {
+            bindings = <
                          &trans   &trans   &trans &kp BSLH   &md_code  &trans &trans   &trans
             &none &kp N6 &kp N4   &kp N0   &kp N2 &kp PIPE   &kp UNDER &kp N3 &kp N1   &kp N5 &kp N7 &none
                   &trans &kp PLUS &kp DLLR &kp N8 &none      &none     &kp N9 &kp STAR &trans &trans
@@ -336,18 +347,6 @@
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
-
-        SYM_layer {
-            bindings = <
-                         &trans &trans &trans &trans  &trans &trans &trans &trans
-            &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
-                  &bootloader &trans &trans &trans &none   &none  &trans &trans &trans &trans
-                                &trans &trans &trans  &trans &trans &trans
-            >;
-
-			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
-       };
-       
         NAV_layer {
             bindings = <
                           &trans &trans &trans &trans  &trans &trans &trans &trans
