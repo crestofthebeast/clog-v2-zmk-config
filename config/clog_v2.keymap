@@ -60,6 +60,27 @@
 	        = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>
 		;
 	    };
+	  
+	bigarr_rgt: bigarr_rgt {
+	    label = "ZM_bigarr_rgt";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp EQUAL &kp GT>
+		;
+	    };
+	 bigarr_lft: bigarr_lft {
+	    label = "ZM_bigarr_lft";
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+	    wait-ms = <3>;
+	    tap-ms = <3>;
+	    bindings
+	        = <&macro_tap &kp LT &kp EQUAL>
+		;
+	    };
 	};
 
     behaviors {
