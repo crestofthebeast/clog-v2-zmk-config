@@ -168,6 +168,12 @@
     combos {
         compatible = "zmk,combos";
 	
+	combo_slsh {
+	    timeout-ms = <20>;
+            key-positions = <15 17>;
+            bindings = <&kp SLASH>;
+	};
+	
 	combo_lbrc {
 	    timeout-ms = <20>;
             key-positions = <2 12>;
@@ -217,13 +223,13 @@
 	};
 	
 	combo_caret {
-            timeout-ms = <20>;
+            timeout-ms = <35>;
             key-positions = <14 15>;
             bindings = <&kp CARET>;
         };
 	
 	combo_grave {
-            timeout-ms = <20>;
+            timeout-ms = <35>;
             key-positions = <4 5>;
             bindings = <&kp GRAVE>;
         };
@@ -277,7 +283,7 @@
         };
 
 	combo_z {
-            timeout-ms = <20>;
+            timeout-ms = <35>;
             key-positions = <2 3>;
             bindings = <&kp Z>;
 	};
@@ -311,10 +317,10 @@
 	
 	MAC_layer {
             bindings = <
-                         &trans &trans &trans &trans  &trans &trans &trans &trans
-            &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
-                  &trans &trans &trans &trans &none   &none  &trans &trans &trans &trans
-                                &trans &trans &trans  &trans &trans &trans
+                         &trans   &trans   &trans &kp BSLH   &trans    &trans &trans   &trans
+            &none &kp N6 &kp N4   &kp N0   &kp N2 &kp PIPE   &kp UNDER &kp N3 &kp N1   &kp N5 &kp N7 &none
+                  &trans &kp PLUS &kp DLLR &kp N8 &none      &none     &kp N9 &kp STAR &trans &trans
+                                  &trans   &trans &trans     &trans    &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
