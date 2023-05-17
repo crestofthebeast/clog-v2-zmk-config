@@ -438,10 +438,10 @@
         };
         NAV_layer {
             bindings = <
-                            &kp CAPS &kp TAB   &trans    &bt BT_NXT      &out OUT_TOG &kp DEL  &kp UP    &kp HOME
-            &none &kp PSCRN &sk LALT &sk LSHFT &sk LCTRL &bt BT_PRV      &bt BT_CLR   &kp LEFT &kp DOWN  &kp RIGHT &kp INS &none
-                  &to MAC   &trans   &sk LGUI  &to MAC   &none           &none        &kp BSPC &kp PG_DN &kp PG_UP &kp END
-                                     &trans    &trans    &trans          &trans       &trans   &trans
+                            &kp CAPS &kp TAB   &trans    &bt BT_NXT      &none       &kp DEL  &kp UP    &kp HOME
+            &none &kp PSCRN &sk LALT &sk LSHFT &sk LCTRL &bt BT_PRV      &bt BT_CLR  &kp LEFT &kp DOWN  &kp RIGHT &kp INS &none
+                  &to MAC   &trans   &sk LGUI  &to MAC   &none           &none       &kp BSPC &kp PG_DN &kp PG_UP &kp END
+                                     &trans    &trans    &trans          &trans      &trans   &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
