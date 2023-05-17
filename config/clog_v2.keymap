@@ -405,10 +405,10 @@
 	
 	MAC_layer {
             bindings = <
-                          &trans &trans &trans &trans  &trans &trans &trans &trans
-            &none &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
-                  &to MAC &trans &trans &trans &none   &none  &trans &trans &trans &trans
-                                 &trans &trans &trans  &trans &trans &trans
+                         &gqt HYPR W  &kp F         &kp P         &kp B            &colons   &kp L          &kp U              &gqt HYPR Y
+            &none  &kp R &gqt LALT S  &gqt LSHFT T  &gqt LCTL H   &kp K            &parens   &gqt RCTL N    &gqt RSHFT A       &gqt RALT I  &kp O   &none
+                   &kp V &kp C        &gqt LGUI G   &kp D         &none            &none     &kp M          &quommagqt RGUI 0  &dang        &dqand
+                                      &kp C_MUTE    &sqtlt NAV 0  &lt NAV SPC      &lt SYM E &lt NAV ENTER  &none
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -416,20 +416,20 @@
 
         SYM_layer {
             bindings = <
-                         &trans   &trans   &trans &kp BSLH   &md_code  &trans &trans   &trans
-            &none &kp N6 &kp N4   &kp N0   &kp N2 &kp PIPE   &kp UNDER &kp N3 &kp N1   &kp N5 &kp N7 &none
-                  &trans &kp PLUS &kp DLLR &kp N8 &none      &none     &kp N9 &kp STAR &trans &trans
-                                  &trans   &trans &trans     &trans    &trans &trans
+                         &wikilink &bigarr_lft  &trans &kp BSLH   &md_code  &gt_equal &bigarr_rgt &emdash
+            &none &kp N6 &kp N4    &kp N0       &kp N2 &kp PIPE   &kp UNDER &kp N3    &kp N1      &kp N5    &kp N7 &none
+                  &trans &kp PLUS  &kp DLLR     &kp N8 &none      &none     &kp N9    &kp STAR    &notequal &and_and
+                                   &trans       &trans &trans     &trans    &trans    &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
         NAV_layer {
             bindings = <
-                          &trans &trans &trans &trans  &trans &trans &trans &trans
-            &none &trans  &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
-                  &to MAC &trans &trans &trans &none   &none  &trans &trans &trans &trans
-                                 &trans &trans &trans  &trans &trans &trans
+                            &kp CAPS &kp TAB   &trans    &trans      &trans &kp DEL  &kp UP    &kp HOME
+            &none &kp PSCRN &sk LALT &sk LSHFT &sk LCTRL &trans      &trans &kp LEFT &kp DOWN  &kp RIGHT &kp INS &none
+                  &to MAC   &trans   &sk LGUI  &to MAC   &none       &none  &kp BSPC &kp PG_DN &kp PG_UP &kp END
+                                     &trans    &trans    &trans      &trans &trans   &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
