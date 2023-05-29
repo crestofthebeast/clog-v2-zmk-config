@@ -323,9 +323,15 @@
 	};
 
 	combo_grave {
-            timeout-ms = <35>;
+            timeout-ms = <20>;
             key-positions = <26 27>;
             bindings = <&kp GRAVE>;
+        };
+	
+	combo_under {
+            timeout-ms = <20>;
+            key-positions = <6 7>;
+            bindings = <&kp UNDER>;
         };
 	
 	combo_minus {
