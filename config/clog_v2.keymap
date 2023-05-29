@@ -180,11 +180,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
-	squilde: sqt_tilde {
+	squstr: sqt_star {
             compatible = "zmk,behavior-mod-morph";
-            label = "SQT_TILDE";
+            label = "SQT_STAR";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp TILDE>;
+            bindings = <&kp SQT>, <&kp STAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 	
@@ -220,7 +220,7 @@
 	    tapping-term-ms = <200>;
 	    quick-tap-ms = <125>;
 	    global-quick-tap;
-	    bindings = <&mo>, <&squilde>;
+	    bindings = <&mo>, <&squstr>;
 	};
 	
 	dqand: dqt_and {
@@ -321,52 +321,28 @@
             key-positions = <15 16>;
             bindings = <&kp BSPC>;
 	};
-	
-	combo_caret {
-            timeout-ms = <35>;
-            key-positions = <14 26>;
-            bindings = <&kp CARET>;
-        };
-	
+
 	combo_grave {
             timeout-ms = <35>;
-            key-positions = <4 5>;
+            key-positions = <26 27>;
             bindings = <&kp GRAVE>;
-        };
-	
-	combo_perc {
-            timeout-ms = <20>;
-            key-positions = <5 6>;
-            bindings = <&kp PERCENT>;
         };
 	
 	combo_minus {
             timeout-ms = <20>;
-            key-positions = <6 7>;
-            bindings = <&kp MINUS>;
-        };
-	
-	combo_at {
-            timeout-ms = <20>;
             key-positions = <27 28>;
-            bindings = <&kp AT>;
+            bindings = <&kp MINUS>;
         };
 	
 	combo_hash {
             timeout-ms = <20>;
-            key-positions = <26 27>;
+            key-positions = <5 6>;
             bindings = <&kp HASH>;
-        };
-	
-	combo_eql {
-            timeout-ms = <20>;
-            key-positions = <0 1>;
-            bindings = <&kp EQUAL>;
         };
 	
         combo_j {
             timeout-ms = <20>;
-            key-positions = <21 22>;
+            key-positions = <0 1>;
             bindings = <&kp J>;
         };
 	
@@ -378,13 +354,13 @@
 	
 	combo_x {
             timeout-ms = <20>;
-            key-positions = <22 23>;
+            key-positions = <21 22>;
             bindings = <&kp X>;
         };
 
 	combo_z {
             timeout-ms = <35>;
-            key-positions = <2 3>;
+            key-positions = <22 23>;
             bindings = <&kp Z>;
 	};
 	
@@ -428,10 +404,10 @@
 
         SYM_layer {
             bindings = <
-                         &wikilink &bigarr_lft  &trans &kp BSLH   &md_code  &gt_equal &bigarr_rgt &emdash
-            &none &kp N6 &kp N4    &kp N0       &kp N2 &kp PIPE   &kp UNDER &kp N3    &kp N1      &kp N5    &kp N7 &none
-                  &trans &kp PLUS  &kp DLLR     &kp N8 &none      &none     &kp N9    &kp STAR    &notequal &and_and
-                                   &trans       &trans &trans     &trans    &trans    &trans
+                         &kp N7 &kp N8 &kp N9 &kp N0    &kp TILDE &trans    &kp CARET &kp DOLLAR
+            &none &kp N0 &kp N3 &kp N2 &kp N1 &kp PIPE  &kp BSLH  &kp EQUAL &kp PRCNT &kp AT &trans &none
+                  &trans &kp N4 &kp N5 &kp N6 &none     &none     &kp PLUS  &trans    &trans &trans
+                                &trans &trans &trans    &trans    &trans &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
