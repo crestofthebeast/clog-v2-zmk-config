@@ -286,18 +286,6 @@
             bindings = <&kp RBRC>;
 	};
 	
-	combo_lt {
-	    timeout-ms = <20>;
-            key-positions = <1 11>;
-            bindings = <&kp LT>;
-	};
-	
-	combo_gt {
-	    timeout-ms = <20>;
-            key-positions = <6 16>;
-            bindings = <&kp GT>;
-	};
-	
 	combo_lbkt {
 	    timeout-ms = <20>;
             key-positions = <0 10>;
@@ -388,9 +376,9 @@
 
         MAIN_layer {
             bindings = <
-                         &gqt HYPR W  &kp F         &kp P         &kp B            &colons   &kp L          &kp U              &gqt HYPR Y
-            &none  &kp R &gqt LALT S  &gqt LSHFT T  &gqt LCTL H   &kp K            &parens   &gqt RCTL N    &gqt RSHFT A       &gqt RALT I  &kp O   &none
-                   &kp V &kp C        &gqt LGUI G   &kp D         &none            &none     &kp M          &quommagqt RGUI 0  &dang        &dqand
+                         &gqt HYPR W  &gqt LGUI F   &kp P         &kp B            &colons   &kp L          &gqt RGUI U    &gqt HYPR Y
+            &none  &kp R &gqt LALT S  &gqt LSHFT T  &gqt LCTL H   &kp K            &parens   &gqt RCTL N    &gqt RSHFT A   &gqt RALT I  &kp O   &none
+                   &kp V &kp C        &kp G         &kp D         &none            &none     &kp M          &quomma        &dang        &dqand
                                       &kp C_MUTE    &sqtlt NAV 0  &lt NAV SPC      &lt SYM E &lt NAV ENTER  &none
             >;
 
@@ -410,10 +398,10 @@
 
         SYM_layer {
             bindings = <
-                         &kp N7 &kp N8 &kp N9 &kp N0    &kp TILDE &trans    &kp CARET &kp DOLLAR
-            &none &kp N0 &kp N3 &kp N2 &kp N1 &kp PIPE  &kp BSLH  &kp EQUAL &kp PRCNT &kp AT &trans &none
-                  &trans &kp N4 &kp N5 &kp N6 &none     &none     &kp PLUS  &trans    &trans &trans
-                                &trans &kp N0 &trans    &trans    &trans &trans
+                         &kp N7 &kp N8 &kp N9 &kp N0    &kp TILDE &kp DOLLAR &kp LT &kp GT
+            &none &kp N0 &kp N3 &kp N2 &kp N1 &kp PIPE  &kp BSLH  &kp EQUAL  &kp PRCNT &kp AT &kp CARET &none
+                  &trans &kp N4 &kp N5 &kp N6 &none     &none     &kp PLUS   &trans    &trans &trans
+                                &trans &kp N0 &trans    &trans    &trans     &trans
             >;
 
 			sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
