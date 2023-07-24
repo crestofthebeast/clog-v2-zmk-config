@@ -360,13 +360,13 @@
 	
 	combo_lsft {
 	    timeout-ms = <20>;
-            key-positions = <10 11>;
+            key-positions = <1 11>;
             bindings = <&skq LSHFT>;
 	};
 	
 	combo_rsft {
 	    timeout-ms = <20>;
-            key-positions = <16 17>;
+            key-positions = <6 16>;
             bindings = <&skq RSHFT>;
 	};
     };
