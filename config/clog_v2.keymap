@@ -9,11 +9,15 @@
 #define SYM 2
 #define NAV 3
 
+#define TAPPING_TERM 210
+#define SHIFT_TAP    170
+#define QUICK_TAP    105
 
 #define SK(KEY) &nk KEY KEY
 #define HYP(KEY) LG(LA(LS(LC(key))))
 #define MEH(KEY) LA(LS(LC(key)))
 #define HYPR LG(LC(LS(LALT)))
+
 
 &sk {
   release-after-ms = <60000>;
@@ -140,6 +144,37 @@
 	};
 
     behaviors {
+	lmt: left_mod_tap {
+	    label           = "left_mod_tap";
+	    compatible      = "zmk,behavior-hold-tap";
+	    flavor          = "tap-preferred";
+	    tapping-term-ms = <TAPPING_TERM>;
+	    quick-tap-ms    = <QUICK_TAP>;
+	    #binding-cells  = <2>;
+	    bindings        = <&kp>, <&kp>;
+	    hold-trigger-key-positions = <
+		0  1  2  3
+	  8  9  10 11 12 13
+	     20 21 22 23 24
+		      30 31
+	    >;
+	};
+
+	rmt: right_mod_tap {
+	    label           = "right_mod_tap";
+	    compatible      = "zmk,behavior-hold-tap";
+	    flavor          = "tap-preferred";
+	    tapping-term-ms = <TAPPING_TERM>;
+	    quick-tap-ms    = <QUICK_TAP>;
+	    #binding-cells  = <2>;
+	    bindings        = <&kp>, <&kp>;
+	    hold-trigger-key-positions = <
+	    	4  5  6  7
+		14 15 16 17 18 19
+		25 26 27 28 29
+		32 33
+	    >;
+	};
 
 	// Sticky key on tap, normal key on hold
     	// Useful for modifier-clicking without the modifier remaining active
