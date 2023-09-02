@@ -176,6 +176,37 @@
 	    >;
 	};
 
+	lst: left_shift_tap {
+	    label           = "left_shift_tap";
+	    compatible      = "zmk,behavior-hold-tap";
+	    flavor          = "balanced";
+	    tapping-term-ms = <SHIFT_TAP>;
+	    quick-tap-ms    = <QUICK_TAP>;
+	    #binding-cells  = <2>;
+	    bindings        = <&kp>, <&kp>;
+	    hold-trigger-key-positions = <
+		0  1  2  3
+	  8  9  10 11 12 13
+	     20 21 22 23 24
+		      30 31
+	    >;
+	};
+	rst: right_shift_tap {
+	    label           = "right_shift_tap";
+	    compatible      = "zmk,behavior-hold-tap";
+	    flavor          = "balanced";
+	    tapping-term-ms = <SHIFT_TAP>;
+	    quick-tap-ms    = <QUICK_TAP>;
+	    #binding-cells  = <2>;
+	    bindings        = <&kp>, <&kp>;
+	    hold-trigger-key-positions = <
+	     	4  5  6  7
+		14 15 16 17 18 19
+		25 26 27 28 29
+		32 33
+	    >;
+	};
+
 	// Sticky key on tap, normal key on hold
     	// Useful for modifier-clicking without the modifier remaining active
     	nk: not_so_sticky_key {
