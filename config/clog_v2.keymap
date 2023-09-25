@@ -443,7 +443,7 @@
         MAIN_layer {
             bindings = <
                          &gqt HYPR W  &gqt LGUI F   &kp P         &kp B            &colons   &kp L          &gqt RGUI U    &gqt HYPR Y
-            &none  &kp R &lmt LALT S  &lmt LSHFT T  &lmt LCTL H   &kp K            &parens   &rmt RCTL N    &rmt RSHFT A   &rmt RALT I  &kp O   &none
+            &none  &kp R &lmt LALT S  &lst LSHFT T  &lmt LCTL H   &kp K            &parens   &rmt RCTL N    &rst RSHFT A   &rmt RALT I  &kp O   &none
                    &kp V &kp C        &kp G         &kp D         &none            &none     &kp M          &quomma        &dang        &dqand
                                       &kp C_MUTE    &sqtlt NAV 0  &lt NAV SPC      &lt SYM E &lt NAV ENTER  &none
             >;
